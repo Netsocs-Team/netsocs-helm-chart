@@ -25,8 +25,11 @@ jobs:
     steps:
       - run: |
           echo "Version: ${{ inputs.version }}"
-    # run set-app-version.py
-    - name: Set app version
-      run: |
-        python scripts/set-app-version.py ${{ inputs.version }}
+    
+  set-app-version:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Set app version
+        run: |
+          python scripts/set-app-version.py ${{ inputs.version }}
       
