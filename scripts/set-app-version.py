@@ -30,7 +30,7 @@ def update_all_versions(new_version):
     script_dir = os.path.dirname(os.path.abspath(__file__))
     
     # Update Chart.yaml
-    chart_path = os.path.join(script_dir, '../Chart.yaml')
+    chart_path = os.path.join(script_dir, '../netsocs-helm-chart/Chart.yaml')
     update_version_in_file(chart_path, new_version)
     
 
