@@ -10,18 +10,14 @@ on:
         required: true
         type: choice
         options:
-        - access_control
-        - automation
-        - driverhub
-        - configuration_backend_v2
-        - configuration_frontend_v2
-        - dashboard_backend_v2
-        - dashboard_frontend_v2
-        - keycloak
-      prev_sha:
-        description: 'Previous sha of the service'
-        required: true
-        type: string
+        - /service.driver_hub/backend
+        - /module.access_control/backend
+        - /module.automation/backend
+        - /module.configuration/backend_v2
+        - /module.configuration/frontend
+        - /module.dashboard/backendv2
+        - /module.dashboard/frontend
+        - /service.kc/main
       new_sha:
         description: 'New sha of the service'
         required: true
@@ -43,7 +39,7 @@ jobs:
         run: |
           sed -i 's/^version: .*/version: ${{ inputs.version }}/' netsocs-helm-chart/Chart.yaml
           sed -i 's/^appVersion: .*/appVersion: ${{ inputs.version }}/' netsocs-helm-chart/Chart.yaml
-          find netsocs-helm-chart/templates -name "*.yaml" -exec sed -i 's/${{ inputs.prev_sha }}/${{ inputs.new_sha }}/g' {} \;
+          ./update.sh ${{ inputs.service_type }} ${{ inputs.new_sha }}
       - uses: azure/setup-helm@v4.3.0
       - name: Package chart
         run: |
