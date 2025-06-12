@@ -18,7 +18,14 @@ on:
         - dashboard_backend_v2
         - dashboard_frontend_v2
         - keycloak
-
+      prev_sha:
+        description: 'Previous sha of the service'
+        required: true
+        type: string
+      new_sha:
+        description: 'New sha of the service'
+        required: true
+        type: string
 jobs:
   log-the-inputs:
     runs-on: ubuntu-latest
@@ -36,6 +43,7 @@ jobs:
         run: |
           sed -i 's/^version: .*/version: ${{ inputs.version }}/' netsocs-helm-chart/Chart.yaml
           sed -i 's/^appVersion: .*/appVersion: ${{ inputs.version }}/' netsocs-helm-chart/Chart.yaml
+          find netsocs-helm-chart/templates -name "*.yaml" -exec sed -i 's/${{ inputs.prev_sha }}/${{ inputs.new_sha }}/g' {} \;
       - uses: azure/setup-helm@v4.3.0
       - name: Package chart
         run: |
