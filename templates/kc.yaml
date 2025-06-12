@@ -1,0 +1,95 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: keycloak
+  labels:
+    app: keycloak
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: keycloak
+  template:
+    metadata:
+      labels:
+        app: keycloak
+    spec:
+      containers:
+        - name: keycloak
+          image: {{ .Values.registry }}/service.kc/main:{{ .Values.image_tags.keycloak }}
+          imagePullPolicy: {{ .Values.imagePullPolicy }}
+          ports:
+            - containerPort: 8443
+          env:
+            - name: KEYCLOAK_LOGLEVEL
+              value: "ALL"
+            - name: KEYCLOAK_ADMIN
+              value: "admin"
+            - name: KEYCLOAK_ADMIN_PASSWORD
+              value: "admin123"
+            - name: KC_DB
+              value: "mysql"
+            - name: KC_DB_URL_DATABASE
+              valueFrom:
+                configMapKeyRef:
+                  name: {{ .Release.Name }}-netsocs-configurations
+                  key: DB_NAME
+            - name: KC_PROXY
+              value: "edge"
+            - name: KC_HOSTNAME
+              value: {{ .Values.httpHostname }}/auth
+            - name: KC_DB_USERNAME
+              valueFrom:
+                configMapKeyRef:
+                  name: {{ .Release.Name }}-netsocs-configurations
+                  key: DB_USER
+            - name: KC_DB_PASSWORD
+              valueFrom:
+                configMapKeyRef:
+                  name: {{ .Release.Name }}-netsocs-configurations
+                  key: DB_PASS
+            - name: KC_DB_URL_HOST
+              valueFrom:
+                configMapKeyRef:
+                  name: {{ .Release.Name }}-netsocs-configurations
+                  key: DB_HOST
+            - name: KC_DB_URL_PORT
+              valueFrom:
+                configMapKeyRef:
+                  name: {{ .Release.Name }}-netsocs-configurations
+                  key: DB_PORT
+      imagePullSecrets:
+        - name: docker-cred
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: keycloak-service
+spec:
+  selector:
+    app: keycloak
+  ports:
+    - protocol: TCP
+      port: 8443
+      targetPort: 8443
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: kc-ing
+  annotations:
+    nginx.ingress.kubernetes.io/proxy-buffer-size: "1000k"
+    nginx.ingress.kubernetes.io/backend-protocol: "HTTPS"  # Keycloak usa HTTPS
+    nginx.ingress.kubernetes.io/proxy-ssl-verify: "off"    # Opcional: si el certificado es self-signed
+spec:
+  ingressClassName: nginx
+  rules:
+    - http:
+        paths:
+          - path: /auth
+            pathType: ImplementationSpecific
+            backend:
+              service:
+                name: keycloak-service
+                port:
+                  number: 8443

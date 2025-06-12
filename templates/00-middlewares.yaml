@@ -1,0 +1,14 @@
+apiVersion: traefik.io/v1alpha1
+kind: Middleware
+metadata:
+  name: keycloak
+spec:
+  plugin:
+    keycloakopenid:
+      KeycloakURL: {{ .Values.httpHostname }}/auth/ # <- Also supports complete URL, e.g. https://my-keycloak-url.com/auth
+      ClientID: {{ .Values.keycloak.clientId }}
+      ClientSecret: {{ .Values.keycloak.clientSecret }}
+      KeycloakRealm: netsocs
+      Scope: profile email
+      TokenCookieName: NETSOCS_SESSION_USERID
+      InsecureSkipVerify: {{ .Values.skipInsecure }}

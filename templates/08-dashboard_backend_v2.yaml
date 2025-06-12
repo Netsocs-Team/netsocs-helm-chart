@@ -1,0 +1,133 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: netsocs-modules-dashboard-backend-v2
+  labels:
+    app: netsocs-modules-dashboard-backend-v2
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: netsocs-modules-dashboard-backend-v2
+  template:
+    metadata:
+      labels:
+        app: netsocs-modules-dashboard-backend-v2
+    spec:
+      containers:
+        - name: netsocs-modules-dashboard-backend-v2
+          image: {{ .Values.registry }}/module.dashboard/backendv2:{{ .Values.image_tags.dashboard_backend_v2 }}
+          imagePullPolicy: {{ .Values.imagePullPolicy }}
+          ports:
+            - containerPort: 3010
+          env:
+            - name: PORT
+              value: "3000"
+            - name: MYSQLDB_USER
+              valueFrom:
+                configMapKeyRef:
+                  name: {{ .Release.Name }}-netsocs-configurations
+                  key: DB_USER
+            - name: MYSQLDB_PASSWORD
+              valueFrom:
+                configMapKeyRef:
+                  name: {{ .Release.Name }}-netsocs-configurations
+                  key: DB_PASS
+            - name: MYSQLDB_HOST
+              valueFrom:
+                configMapKeyRef:
+                  name: {{ .Release.Name }}-netsocs-configurations
+                  key: DB_HOST
+            - name: MYSQLDB_PORT
+              valueFrom:
+                configMapKeyRef:
+                  name: {{ .Release.Name }}-netsocs-configurations
+                  key: DB_PORT
+            - name: MYSQLDB_DATABASE
+              valueFrom:
+                configMapKeyRef:
+                  name: {{ .Release.Name }}-netsocs-configurations
+                  key: DB_NAME
+            - name: MYSQLDB_TABLE_PREFIX
+              value: dashboard_
+            - name: DRIVERHUB_API_URL
+              value: http://netsocs-driverhub-service:3196
+            - name: MONGODB_URI
+              valueFrom:
+                configMapKeyRef:
+                  name: {{ .Release.Name }}-netsocs-configurations
+                  key: MONGO_URI
+            - name: MONGODB_DATABASE
+              valueFrom:
+                configMapKeyRef:
+                  name: {{ .Release.Name }}-netsocs-configurations
+                  key: MONGO_DATABASE
+          volumeMounts:
+            - name: static-folder-storage
+              mountPath: /app/public/
+      imagePullSecrets:
+        - name: docker-cred
+      volumes:
+        - name: static-folder-storage
+          persistentVolumeClaim:
+            claimName: dashboard-static-pvc
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: netsocs-modules-dashboard-backend-service-v2
+spec:
+  selector:
+    app: netsocs-modules-dashboard-backend-v2
+  ports:
+    - protocol: TCP
+      port: 3000
+      targetPort: 3000
+---
+apiVersion: traefik.io/v1alpha1
+kind: Middleware
+metadata:
+  name: dashboard-backend-v2-stripprefix
+spec:
+  stripPrefix:
+    prefixes:
+      - /api/netsocs/module.dashboard-v2
+---
+apiVersion: traefik.io/v1alpha1
+kind: IngressRoute
+metadata:
+  name: dashboard-backend-v2
+spec:
+  routes:
+    - match: PathPrefix(`/api/netsocs/module.dashboard-v2`)
+      kind: Rule
+      middlewares:
+        - name: keycloak
+        - name: dashboard-backend-v2-stripprefix
+      services:
+        - name: netsocs-modules-dashboard-backend-service-v2
+          port: 3000
+---
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: dashboard-static-pv
+spec:
+  capacity:
+    storage: 1Gi
+  accessModes:
+    - ReadWriteOnce
+  hostPath:
+    path: /mnt/netsocs/static-dashboard   # Directorio en el nodo donde se almacenarán los archivos estáticos
+  persistentVolumeReclaimPolicy: Retain
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: dashboard-static-pvc
+spec:
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 1Gi

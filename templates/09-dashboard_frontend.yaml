@@ -1,0 +1,107 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: netsocs-modules-dashboard-frontend
+  labels:
+    app: netsocs-modules-dashboard-frontend
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: netsocs-modules-dashboard-frontend
+  template:
+    metadata:
+      labels:
+        app: netsocs-modules-dashboard-frontend
+    spec:
+      containers:
+        - name: netsocs-modules-dashboard-frontend
+          image: {{ .Values.registry }}/module.dashboard/frontend:{{ .Values.image_tags.dashboard_frontend }}
+          imagePullPolicy: {{ .Values.imagePullPolicy }}
+          ports:
+            - containerPort: 3000
+          env:
+            - name: DEMO_FRONTEND_CLIENT_ID
+              value: front
+            - name: DEMO_FRONTEND_CLIENT_SECRET
+              value: "qaLyJoyboP261mSZqTHS8qDhhox1vKhT"
+            - name: AUTH_ISSUER
+              value: /auth/realms/testrealm
+            # - name: NEXTAUTH_URL
+            #   value: http://192.168.1.77
+            - name: NEXTAUTH_SECRET
+              value: my-secret-goes-here-abc-123
+            - name: END_SESSION_URL
+              value: /auth/realms/testrealm/protocol/openid-connect/logout
+            - name: REFRESH_TOKEN_URL
+              value: /auth/realms/testrealm/protocol/openid-connect/token
+      imagePullSecrets:
+        - name: docker-cred
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: netsocs-modules-dashboard-frontend-service
+spec:
+  selector:
+    app: netsocs-modules-dashboard-frontend
+  ports:
+    - protocol: TCP
+      port: 3000
+      targetPort: 3000
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: netsocs-modules-dashboard-frontend-ingress
+  annotations:
+    #   nginx.ingress.kubernetes.io/rewrite-target: /$2
+    #   nginx.ingress.kubernetes.io/use-regex: "true"
+    nginx.ingress.kubernetes.io/proxy-buffer-size: "1000k"
+spec:
+  ingressClassName: nginx
+  rules:
+    - http:
+        paths:
+          - path: /
+            pathType: ImplementationSpecific
+            backend:
+              service:
+                name: {{ .Release.Name }}-traefik
+                port:
+                  number: 80
+---
+apiVersion: traefik.io/v1alpha1
+kind: IngressRoute
+metadata:
+  name: dashboard-frontend
+spec:
+  routes:
+    - match: PathPrefix(`/`)
+      kind: Rule
+      middlewares:
+        - name: keycloak
+      services:
+        - name: netsocs-modules-dashboard-frontend-service
+          port: 3000
+# ---
+# apiVersion: networking.k8s.io/v1
+# kind: Ingress
+# metadata:
+#   name: netsocs-modules-dashboard-frontend-ingress
+#   annotations:
+#     #   nginx.ingress.kubernetes.io/rewrite-target: /$2
+#     #   nginx.ingress.kubernetes.io/use-regex: "true"
+#     nginx.ingress.kubernetes.io/proxy-buffer-size: "1000k"
+# spec:
+#   ingressClassName: nginx
+#   rules:
+#     - http:
+#         paths:
+#           - path: /
+#             pathType: ImplementationSpecific
+#             backend:
+#               service:
+#                 name: netsocs-modules-dashboard-frontend-service
+#                 port:
+#                   number: 3000

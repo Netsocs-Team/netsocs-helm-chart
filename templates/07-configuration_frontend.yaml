@@ -1,0 +1,51 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: netsocs-modules-configuration-frontend
+  labels:
+    app: netsocs-modules-configuration-frontend
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: netsocs-modules-configuration-frontend
+  template:
+    metadata:
+      labels:
+        app: netsocs-modules-configuration-frontend
+    spec:
+      containers:
+        - name: netsocs-modules-configuration-frontend
+          image: {{ .Values.registry }}/module.configuration/frontend:{{ .Values.image_tags.configuration_frontend }}
+          imagePullPolicy: {{ .Values.imagePullPolicy }}
+          ports:
+            - containerPort: 3690
+
+      imagePullSecrets:
+        - name: docker-cred
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: netsocs-modules-configuration-frontend-service
+spec:
+  selector:
+    app: netsocs-modules-configuration-frontend
+  ports:
+    - protocol: TCP
+      port: 3690
+      targetPort: 3690
+---
+apiVersion: traefik.io/v1alpha1
+kind: IngressRoute
+metadata:
+  name: configuration-frontend
+spec:
+  routes:
+    - match: PathPrefix(`/n/config`)
+      kind: Rule
+      middlewares:
+        - name: keycloak
+      services:
+        - name: netsocs-modules-configuration-frontend-service
+          port: 3690

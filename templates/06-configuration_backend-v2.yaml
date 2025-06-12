@@ -1,0 +1,129 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: netsocs-modules-configuration-backendv2
+  labels:
+    app: netsocs-modules-configuration-backendv2
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: netsocs-modules-configuration-backendv2
+  template:
+    metadata:
+      labels:
+        app: netsocs-modules-configuration-backendv2
+    spec:
+      containers:
+        - name: netsocs-modules-configuration-backendv2
+          image: {{ .Values.registry }}/module.configuration/backend_v2:{{ .Values.image_tags.configuration_backend_v2 }}
+          imagePullPolicy: {{ .Values.imagePullPolicy }}          
+          ports:
+            - name: http
+              containerPort: 3091
+          env:
+            - name: PORT
+              value: "3091"
+            - name: NAME_DB
+              valueFrom:
+                configMapKeyRef:
+                  name: {{ .Release.Name }}-netsocs-configurations
+                  key: DB_NAME
+            - name: HOST_DB
+              valueFrom:
+                configMapKeyRef:
+                  name: {{ .Release.Name }}-netsocs-configurations
+                  key: DB_HOST
+            - name: USER_DB
+              valueFrom:
+                configMapKeyRef:
+                  name: {{ .Release.Name }}-netsocs-configurations
+                  key: DB_USER
+            - name: PASS_DB
+              valueFrom:
+                configMapKeyRef:
+                  name: {{ .Release.Name }}-netsocs-configurations
+                  key: DB_PASS
+            - name: PORT_DB
+              valueFrom:
+                configMapKeyRef:
+                  name: {{ .Release.Name }}-netsocs-configurations
+                  key: DB_PORT            
+            - name: DB_KEY
+              valueFrom:
+                configMapKeyRef:
+                  name: {{ .Release.Name }}-netsocs-configurations
+                  key: MYSQL_DB_KEY
+            - name: DRIVER_HUB_URL_API
+              value: "http://netsocs-driverhub-service:3196"
+            - name: DEFAULT_REPO
+              value: 'https://netsocs-public-drivers-repository.s3.us-east-1.amazonaws.com/repodemo.json'
+            - name: KEYCLOACK_REALM
+              value: {{ .Values.keycloak.realm }}
+            - name: KEYCLOACK_BASE_URL
+              value: {{ .Values.httpHostname }}
+            - name: KEYCLOACK_CLIENT_ID
+              value: {{ .Values.keycloak.clientId }}
+            - name: KEYCLOACK_CLIENT_SECRET
+              value: {{ .Values.keycloak.clientSecret }}
+            - name: KEYCLOACK_ADMIN_USERNAME
+              value: {{ .Values.keycloak.adminUserName }}
+            - name: KEYCLOACK_ADMIN_PASSWORD
+              value: {{ .Values.keycloak.adminPassword }}
+            - name: ACCOUNT_ID
+              value: {{ .Values.keygen.accountId }}
+            - name: PRODUCT_ID
+              value: {{ .Values.keygen.productId }}
+            - name: PUBLIC_KEY
+              value: {{ .Values.keygen.publicKey }}
+            - name: ACCOUNT_KEY
+              value: {{ .Values.keygen.accountKey }}
+      imagePullSecrets:
+        - name: docker-cred
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: netsocs-modules-configuration-backendv2-service
+spec:
+  selector:
+    app: netsocs-modules-configuration-backendv2
+  ports:
+    - name: http
+      protocol: TCP
+      port: 3091
+      targetPort: 3091
+
+---
+apiVersion: traefik.io/v1alpha1
+kind: Middleware
+metadata:
+  name: configuration-backend-v2-stripprefix
+spec:
+  stripPrefix:
+    prefixes:
+      - /api/netsocs/module.configuration-v2
+---
+apiVersion: traefik.io/v1alpha1
+kind: Middleware
+metadata:
+  name: add-api-v2-config-v2
+spec:
+  addPrefix:
+    prefix: /api/v2
+---
+apiVersion: traefik.io/v1alpha1
+kind: IngressRoute
+metadata:
+  name: configuration-backendv2-frontend
+spec:
+  routes:
+    - match: PathPrefix(`/api/netsocs/module.configuration-v2`)
+      kind: Rule
+      middlewares:
+        - name: keycloak
+        - name: configuration-backend-v2-stripprefix
+        - name: add-api-v2-config-v2
+      services:
+        - name: netsocs-modules-configuration-backendv2-service
+          port: 3091

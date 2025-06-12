@@ -1,0 +1,109 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+    name: netsocs-driverhub-deployment
+    labels:
+        app: netsocs-driverhub
+spec:
+    replicas: 1
+    selector:
+        matchLabels:
+            app: netsocs-driverhub
+    template:
+        metadata:
+            labels:
+                app: netsocs-driverhub
+        spec:
+            imagePullSecrets:
+                - name: docker-cred
+            containers:
+                - name: netsocs-driverhub
+                  image: {{ .Values.registry }}/service.driver_hub/backend:{{ .Values.image_tags.driverhub }}
+                  imagePullPolicy: {{ .Values.imagePullPolicy }}
+                  ports:
+                      - containerPort: 3196
+                  env:
+                      - name: REDIS_HOST
+                        valueFrom:
+                          configMapKeyRef:
+                            name: {{ .Release.Name }}-netsocs-configurations
+                            key: REDIS_HOST
+                      - name: REDIS_PASSWORD
+                        valueFrom:
+                          configMapKeyRef:
+                            name: {{ .Release.Name }}-netsocs-configurations
+                            key: REDIS_PASS
+                      - name: STATIC_FOLDER
+                        value: "/app/static"                      
+                      - name: MYSQL_DATABASE
+                        valueFrom:
+                          configMapKeyRef:
+                            name: {{ .Release.Name }}-netsocs-configurations
+                            key: DB_NAME
+                      - name: MYSQL_USER
+                        valueFrom:
+                          configMapKeyRef:
+                            name: {{ .Release.Name }}-netsocs-configurations
+                            key: DB_USER
+                      - name: MYSQL_PASSWORD
+                        valueFrom:
+                          configMapKeyRef:
+                            name: {{ .Release.Name }}-netsocs-configurations
+                            key: DB_PASS
+                      - name: MYSQL_HOST
+                        valueFrom:
+                          configMapKeyRef:
+                            name: {{ .Release.Name }}-netsocs-configurations
+                            key: DB_HOST
+                      - name: MYSQL_PORT
+                        valueFrom:
+                          configMapKeyRef:
+                            name: {{ .Release.Name }}-netsocs-configurations
+                            key: DB_PORT
+                      - name: MONGODB_URI
+                        valueFrom:
+                          configMapKeyRef:
+                            name: {{ .Release.Name }}-netsocs-configurations
+                            key:  MONGO_URI
+                      - name: MEDIAMTX_DEFAULT_HOSTNAME
+                        value: mediamtx-service
+
+                
+---
+apiVersion: v1
+kind: Service
+metadata:
+    labels:
+        app: netsocs-driverhub
+    name: netsocs-driverhub-service
+spec:
+    ports:
+        - port: 3196
+          protocol: TCP
+          targetPort: 3196
+          name: "http"
+    selector:
+        app: netsocs-driverhub
+    type: NodePort
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: driverhub-ingress
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /$2
+    nginx.ingress.kubernetes.io/use-regex: "true"
+    nginx.ingress.kubernetes.io/proxy-read-timeout: "31536000"
+    nginx.ingress.kubernetes.io/proxy-send-timeout: "31536000"
+spec:
+  ingressClassName: nginx
+  rules:
+    - http:
+        paths:
+          - path: /api/netsocs/dh(/|$)(.*)
+            pathType: ImplementationSpecific
+            backend:
+              service:
+                name: netsocs-driverhub-service
+                port:
+                  number: 3196

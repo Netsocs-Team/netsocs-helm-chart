@@ -1,0 +1,93 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+    name: automation-backend
+    labels:
+        app: automation-backend
+spec:
+    replicas: 1
+    selector:
+        matchLabels:
+            app: automation-backend
+    template:
+        metadata:
+            labels:
+                app: automation-backend
+        spec:
+            containers:
+                - name: automation-backend
+                  image: {{ .Values.registry }}/module.automation/backend:{{ .Values.image_tags.automation }}               
+                  imagePullPolicy: {{ .Values.imagePullPolicy }}                  
+                  ports:
+                    - containerPort: 8080
+                  env:                  
+                  - name: MYSQLDB_AUTOMATION_DATABASE
+                    value: "netsocs"
+                  - name: MYSQLDB_USER
+                    valueFrom:
+                      configMapKeyRef:
+                        name: {{ .Release.Name }}-netsocs-configurations
+                        key: DB_USER
+                  - name: MYSQLDB_PASSWORD
+                    valueFrom:
+                      configMapKeyRef:
+                        name: {{ .Release.Name }}-netsocs-configurations
+                        key: DB_PASS
+                  - name: MYSQLDB_HOST
+                    valueFrom:
+                      configMapKeyRef:
+                        name: {{ .Release.Name }}-netsocs-configurations
+                        key: DB_HOST
+                  - name: MYSQLDB_PORT
+                    valueFrom:
+                      configMapKeyRef:
+                        name: {{ .Release.Name }}-netsocs-configurations
+                        key: DB_PORT
+                  - name: REDIS_URL
+                    valueFrom:
+                      configMapKeyRef:
+                        name: {{ .Release.Name }}-netsocs-configurations
+                        key: REDIS_HOST
+                  - name: REDIS_PASSWORD
+                    valueFrom:
+                      configMapKeyRef:
+                        name: {{ .Release.Name }}-netsocs-configurations
+                        key: REDIS_PASS
+                  - name: PORT
+                    value: "8080"
+                  - name: DRIVERHUB_HOST
+                    value: "http://netsocs-driverhub-service:3196"
+            imagePullSecrets:
+                - name: docker-cred
+---
+apiVersion: v1
+kind: Service
+metadata:
+    name: automation-backend-service
+spec:
+    selector:
+        app: automation-backend
+    ports:
+        - protocol: TCP
+          port: 8080
+          targetPort: 8080
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: automation-backend-ingress
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /$2
+    nginx.ingress.kubernetes.io/use-regex: "true"
+spec:
+  ingressClassName: nginx
+  rules:
+  - http:
+      paths:
+      - path: /api/netsocs/automation(/|$)(.*)
+        pathType: ImplementationSpecific
+        backend:
+          service:
+            name: automation-backend-service
+            port:
+              number: 8080
