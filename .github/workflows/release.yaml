@@ -31,5 +31,6 @@ jobs:
     steps:
       - name: Set app version
         run: |
-          python scripts/set-app-version.py ${{ inputs.version }}
+          sed -i 's/^version: .*/version: ${{ inputs.version }}/' netsocs-helm-chart/Chart.yaml
+          sed -i 's/^appVersion: .*/appVersion: ${{ inputs.version }}/' netsocs-helm-chart/Chart.yaml
       
