@@ -25,10 +25,13 @@ jobs:
     steps:
       - run: |
           echo "Version: ${{ inputs.version }}"
+
     
   set-app-version:
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout
+        uses: actions/checkout@v4
       - name: Set app version
         run: |
           sed -i 's/^version: .*/version: ${{ inputs.version }}/' netsocs-helm-chart/Chart.yaml
