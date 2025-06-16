@@ -1,25 +1,23 @@
+httpHostname: https://172.19.172.75
+
 mysql:
   host: "172.17.0.1"
   port: "3306"
-  user: root
-  password: "hseviip6"
-  dbname: "netsocs"
+  user: user
+  password: change-me-please
+  dbname: netsocs
 
-registry: "ghcr.io/netsocs-team"
+redis:
+  host: "172.17.0.1"
+  port: "6379"
+  password: change-me-please
 
-skipInsecure: true
-
-traefik:
-  experimental:
-    plugins:
-      keycloakopenid:
-        moduleName: "github.com/Netsocs-Team/keycloakopenid"
-        version: "v1.0.4"
-
-imagePullPolicy: "Always"
-
-
-httpHostname: https://stress-test.netsocs.com
+mongodb:
+  host: "172.17.0.1"
+  port: "27017"
+  user: netsocs
+  password: change-me-please
+  dbname: netsocs
 
 keycloak:
   clientId: netsocs-kc
@@ -28,39 +26,15 @@ keycloak:
   adminUserName: admin
   adminPassword: admin123
 
-keygen:
-  accountId: '431ea849-0937-476e-aea6-ed943558fb12'
-  productId: '4aafa928-4751-4b80-a2d9-52c260e003ac'
-  publicKey: 'ef1514cab46fea8680290e396d5197b25ce82168838ae574453164149811640f'
-  accountKey: 'prod-44d9890ab7b54673250873b066bb8771561d58ca229dd61daffd9e9e801fd88ev3'
+traefik:
+  experimental:
+    plugins:
+      keycloakopenid:
+        moduleName: "github.com/Netsocs-Team/keycloakopenid"
+        version: "v1.0.4"
 
-mongodb:
-  image: "mongo:latest"
-  service:
-    type: ClusterIP
-    port: "27017"
-  storage:
-    size: 5Gi
+skipInsecure: true
 
-image_tags:
-  access_control_backend: "main"
-  access_control_ui: "main"
-  automation: "main"
-  driverhub: "main"
-  configuration_backend_v2: "main"
-  configuration_frontend: "main"
-  dashboard_backend_v2: "main"
-  dashboard_frontend: "main"
-  keycloak: "main"
+registry: "ghcr.io/netsocs-team"
 
-redis:
-  host: "172.17.0.1"
-  port: "6379"
-  password: ""
-
-mongodb:
-  host: "172.17.0.1"
-  port: "27017"
-  user: root
-  password: "hseviip6"
-  dbname: "netsocs"
+imagePullPolicy: "Always"

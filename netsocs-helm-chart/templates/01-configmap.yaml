@@ -10,13 +10,17 @@ data:
   DB_NAME: {{ .Values.mysql.dbname }}
   
   MONGO_HOST: {{ .Release.Name }}-mongodb
-  MONGO_PORT: "{{ .Values.mongodb.service.port }}"
+  MONGO_PORT: "{{ .Values.mongodb.port }}"
   MONGO_USER: {{ .Values.mongodb.user }}
   MONGO_PASS: {{ .Values.mongodb.password }}
   MONGO_DATABASE: {{ .Values.mongodb.dbname }}
+  # mongodb://root:tXK4)b^ZFB^az^n8sBAGhA7)P9wjkqr9r5)2e7$e@{{ .Release.Name }}-mongodb:27017/?authMechanism=SCRAM-SHA-256
+  MONGO_URI: mongodb://{{ .Values.mongodb.user }}:{{ .Values.mongodb.password }}@{{ .Values.mongodb.host }}:{{ .Values.mongodb.port }}/?authMechanism=SCRAM-SHA-256
   # firstdeploy-redis-master
   REDIS_HOST: {{ .Values.redis.host }}
+  REDIS_PORT: "{{ .Values.redis.port }}"
   REDIS_PASS: {{ .Values.redis.password }}
+  
 
   # SHA VERSION
   ACCESS_CONTROL_IMAGE_TAG: "main"

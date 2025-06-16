@@ -65,8 +65,7 @@ spec:
           volumeMounts:
             - name: static-folder-storage
               mountPath: /app/public/
-      imagePullSecrets:
-        - name: docker-cred
+      
       volumes:
         - name: static-folder-storage
           persistentVolumeClaim:

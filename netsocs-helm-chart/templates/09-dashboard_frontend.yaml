@@ -35,8 +35,7 @@ spec:
               value: /auth/realms/testrealm/protocol/openid-connect/logout
             - name: REFRESH_TOKEN_URL
               value: /auth/realms/testrealm/protocol/openid-connect/token
-      imagePullSecrets:
-        - name: docker-cred
+      
 ---
 apiVersion: v1
 kind: Service
@@ -53,11 +52,14 @@ spec:
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: netsocs-modules-dashboard-frontend-ingress
+  name: nginx-to-traefik
   annotations:
     #   nginx.ingress.kubernetes.io/rewrite-target: /$2
     #   nginx.ingress.kubernetes.io/use-regex: "true"
     nginx.ingress.kubernetes.io/proxy-buffer-size: "1000k"
+    nginx.ingress.kubernetes.io/proxy-body-size: 100m
+    nginx.ingress.kubernetes.io/proxy-buffers: "8 16k"
+
 spec:
   ingressClassName: nginx
   rules:
@@ -84,24 +86,3 @@ spec:
       services:
         - name: netsocs-modules-dashboard-frontend-service
           port: 3000
-# ---
-# apiVersion: networking.k8s.io/v1
-# kind: Ingress
-# metadata:
-#   name: netsocs-modules-dashboard-frontend-ingress
-#   annotations:
-#     #   nginx.ingress.kubernetes.io/rewrite-target: /$2
-#     #   nginx.ingress.kubernetes.io/use-regex: "true"
-#     nginx.ingress.kubernetes.io/proxy-buffer-size: "1000k"
-# spec:
-#   ingressClassName: nginx
-#   rules:
-#     - http:
-#         paths:
-#           - path: /
-#             pathType: ImplementationSpecific
-#             backend:
-#               service:
-#                 name: netsocs-modules-dashboard-frontend-service
-#                 port:
-#                   number: 3000

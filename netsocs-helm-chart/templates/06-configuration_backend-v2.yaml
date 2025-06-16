@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: netsocs-modules-configuration-backendv2
-          image: {{ .Values.registry }}/module.configuration/backend_v2:123
+          image: {{ .Values.registry }}/module.configuration/backend_v2:507d0702286211479fcda84997ee54207aab2c79
           imagePullPolicy: {{ .Values.imagePullPolicy }}          
           ports:
             - name: http
@@ -49,11 +49,6 @@ spec:
                 configMapKeyRef:
                   name: {{ .Release.Name }}-netsocs-configurations
                   key: DB_PORT            
-            - name: DB_KEY
-              valueFrom:
-                configMapKeyRef:
-                  name: {{ .Release.Name }}-netsocs-configurations
-                  key: MYSQL_DB_KEY
             - name: DRIVER_HUB_URL_API
               value: "http://netsocs-driverhub-service:3196"
             - name: DEFAULT_REPO
@@ -70,16 +65,7 @@ spec:
               value: {{ .Values.keycloak.adminUserName }}
             - name: KEYCLOACK_ADMIN_PASSWORD
               value: {{ .Values.keycloak.adminPassword }}
-            - name: ACCOUNT_ID
-              value: {{ .Values.keygen.accountId }}
-            - name: PRODUCT_ID
-              value: {{ .Values.keygen.productId }}
-            - name: PUBLIC_KEY
-              value: {{ .Values.keygen.publicKey }}
-            - name: ACCOUNT_KEY
-              value: {{ .Values.keygen.accountKey }}
-      imagePullSecrets:
-        - name: docker-cred
+      
 ---
 apiVersion: v1
 kind: Service

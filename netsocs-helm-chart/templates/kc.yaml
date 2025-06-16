@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: keycloak
-          image: {{ .Values.registry }}/service.kc/main:{{ .Values.image_tags.keycloak }}
+          image: {{ .Values.registry }}/service.kc/main:41bd5d120f2946c29521a942f76ca2aebcdb0800
           imagePullPolicy: {{ .Values.imagePullPolicy }}
           ports:
             - containerPort: 8443
@@ -58,8 +58,7 @@ spec:
                 configMapKeyRef:
                   name: {{ .Release.Name }}-netsocs-configurations
                   key: DB_PORT
-      imagePullSecrets:
-        - name: docker-cred
+      
 ---
 apiVersion: v1
 kind: Service
@@ -73,23 +72,37 @@ spec:
       port: 8443
       targetPort: 8443
 ---
-apiVersion: networking.k8s.io/v1
-kind: Ingress
+# apiVersion: networking.k8s.io/v1
+# kind: Ingress
+# metadata:
+#   name: kc-ing
+#   annotations:
+#     nginx.ingress.kubernetes.io/proxy-buffer-size: "1000k"
+#     nginx.ingress.kubernetes.io/backend-protocol: "HTTPS"  # Keycloak usa HTTPS
+#     nginx.ingress.kubernetes.io/proxy-ssl-verify: "off"    # Opcional: si el certificado es self-signed
+# spec:
+#   ingressClassName: nginx
+#   rules:
+#     - http:
+#         paths:
+#           - path: /auth
+#             pathType: ImplementationSpecific
+#             backend:
+#               service:
+#                 name: keycloak-service
+#                 port:
+#                   number: 8443
+---
+apiVersion: traefik.io/v1alpha1
+kind: IngressRoute
 metadata:
   name: kc-ing
-  annotations:
-    nginx.ingress.kubernetes.io/proxy-buffer-size: "1000k"
-    nginx.ingress.kubernetes.io/backend-protocol: "HTTPS"  # Keycloak usa HTTPS
-    nginx.ingress.kubernetes.io/proxy-ssl-verify: "off"    # Opcional: si el certificado es self-signed
 spec:
-  ingressClassName: nginx
-  rules:
-    - http:
-        paths:
-          - path: /auth
-            pathType: ImplementationSpecific
-            backend:
-              service:
-                name: keycloak-service
-                port:
-                  number: 8443
+  routes:
+    - match: PathPrefix(`/auth`)
+      kind: Rule
+      services:
+        - name: keycloak-service
+          port: 8443
+          scheme: https
+          serversTransport: insecure-skip-verify

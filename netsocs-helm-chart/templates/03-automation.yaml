@@ -16,7 +16,7 @@ spec:
         spec:
             containers:
                 - name: automation-backend
-                  image: {{ .Values.registry }}/module.automation/backend:123           
+                  image: {{ .Values.registry }}/module.automation/backend:fda926e4665b03dcbc441d81b5bb3238c8a7067d
                   imagePullPolicy: {{ .Values.imagePullPolicy }}                  
                   ports:
                     - containerPort: 8080
@@ -43,11 +43,16 @@ spec:
                       configMapKeyRef:
                         name: {{ .Release.Name }}-netsocs-configurations
                         key: DB_PORT
-                  - name: REDIS_URL
+                  - name: REDIS_HOST
                     valueFrom:
                       configMapKeyRef:
                         name: {{ .Release.Name }}-netsocs-configurations
                         key: REDIS_HOST
+                  - name: REDIS_PORT
+                    valueFrom:
+                      configMapKeyRef:
+                        name: {{ .Release.Name }}-netsocs-configurations
+                        key: REDIS_PORT
                   - name: REDIS_PASSWORD
                     valueFrom:
                       configMapKeyRef:
@@ -57,8 +62,7 @@ spec:
                     value: "8080"
                   - name: DRIVERHUB_HOST
                     value: "http://netsocs-driverhub-service:3196"
-            imagePullSecrets:
-                - name: docker-cred
+            
 ---
 apiVersion: v1
 kind: Service

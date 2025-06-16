@@ -1,0 +1,6 @@
+https:// {
+  tls internal {
+    on_demand
+  }
+  reverse_proxy 172.17.0.1:8080	
+}
