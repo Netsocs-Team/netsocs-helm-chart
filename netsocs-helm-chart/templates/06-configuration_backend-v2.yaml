@@ -102,12 +102,12 @@ apiVersion: traefik.io/v1alpha1
 kind: IngressRoute
 metadata:
   name: configuration-backendv2-frontend
+  namespace: default
 spec:
   routes:
     - match: PathPrefix(`/api/netsocs/module.configuration-v2`)
       kind: Rule
       middlewares:
-        - name: keycloak
         - name: configuration-backend-v2-stripprefix
         - name: add-api-v2-config-v2
       services:

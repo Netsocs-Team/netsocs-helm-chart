@@ -75,23 +75,47 @@ spec:
         - protocol: TCP
           port: 8080
           targetPort: 8080
+# ---
+# apiVersion: networking.k8s.io/v1
+# kind: Ingress
+# metadata:
+#   name: automation-backend-ingress
+#   annotations:
+#     nginx.ingress.kubernetes.io/rewrite-target: /$2
+#     nginx.ingress.kubernetes.io/use-regex: "true"
+# spec:
+#   ingressClassName: nginx
+#   rules:
+#   - http:
+#       paths:
+#       - path: /api/netsocs/automation(/|$)(.*)
+#         pathType: ImplementationSpecific
+#         backend:
+#           service:
+#             name: automation-backend-service
+#             port:
+#               number: 8080
 ---
-apiVersion: networking.k8s.io/v1
-kind: Ingress
+apiVersion: traefik.io/v1alpha1
+kind: Middleware
 metadata:
-  name: automation-backend-ingress
-  annotations:
-    nginx.ingress.kubernetes.io/rewrite-target: /$2
-    nginx.ingress.kubernetes.io/use-regex: "true"
+  name: strip-prefix-automation
 spec:
-  ingressClassName: nginx
-  rules:
-  - http:
-      paths:
-      - path: /api/netsocs/automation(/|$)(.*)
-        pathType: ImplementationSpecific
-        backend:
-          service:
-            name: automation-backend-service
-            port:
-              number: 8080
+  stripPrefix:
+    prefixes:
+      - /api/netsocs/automation
+---
+apiVersion: traefik.io/v1alpha1
+kind: IngressRoute
+metadata:
+  name: automation-ingress
+  namespace: default
+spec:
+  routes:
+    - match: PathPrefix(`/api/netsocs/automation`)
+      kind: Rule
+      middlewares:
+        - name: strip-prefix-automation
+      services:
+        - name: automation-backend-service
+          port: 8080
