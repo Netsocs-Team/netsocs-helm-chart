@@ -85,29 +85,53 @@ spec:
     - protocol: TCP
       port: 3000
       targetPort: 3000
+# ---
+# apiVersion: networking.k8s.io/v1
+# kind: Ingress
+# metadata:
+#   name: netsocs-modules-accesscontrol-backend-ingress
+#   annotations:
+#     nginx.ingress.kubernetes.io/rewrite-target: /$2
+#     nginx.ingress.kubernetes.io/use-regex: "true"
+#     nginx.ingress.kubernetes.io/proxy-body-size: 100m
+#     nginx.ingress.kubernetes.io/proxy-buffers: "8 16k"
+#     nginx.ingress.kubernetes.io/proxy-buffer-size: "16k"
+# spec:
+#   ingressClassName: nginx
+#   rules:
+#     - http:
+#         paths:
+#           - path: /api/netsocs/module.access_control(/|$)(.*)
+#             pathType: ImplementationSpecific
+#             backend:
+#               service:
+#                 name: netsocs-modules-accesscontrol-backend-service
+#                 port:
+#                   number: 3000
 ---
-apiVersion: networking.k8s.io/v1
-kind: Ingress
+apiVersion: traefik.io/v1alpha1
+kind: Middleware
 metadata:
-  name: netsocs-modules-accesscontrol-backend-ingress
-  annotations:
-    nginx.ingress.kubernetes.io/rewrite-target: /$2
-    nginx.ingress.kubernetes.io/use-regex: "true"
-    nginx.ingress.kubernetes.io/proxy-body-size: 100m
-    nginx.ingress.kubernetes.io/proxy-buffers: "8 16k"
-    nginx.ingress.kubernetes.io/proxy-buffer-size: "16k"
+  name: strip-prefix-access
 spec:
-  ingressClassName: nginx
-  rules:
-    - http:
-        paths:
-          - path: /api/netsocs/module.access_control(/|$)(.*)
-            pathType: ImplementationSpecific
-            backend:
-              service:
-                name: netsocs-modules-accesscontrol-backend-service
-                port:
-                  number: 3000
+  stripPrefix:
+    prefixes:
+      - /api/netsocs/module.access_control
+---
+apiVersion: traefik.io/v1alpha1
+kind: IngressRoute
+metadata:
+  name: access-ingress
+  namespace: default
+spec:
+  routes:
+    - match: PathPrefix(`/api/netsocs/module.access_control`)
+      kind: Rule
+      middlewares:
+        - name: strip-prefix-access
+      services:
+        - name: netsocs-modules-accesscontrol-backend-service
+          port: 3000
 ---
 apiVersion: v1
 kind: PersistentVolume

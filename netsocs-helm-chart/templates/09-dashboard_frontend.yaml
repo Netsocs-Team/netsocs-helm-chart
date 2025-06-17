@@ -27,15 +27,12 @@ spec:
               value: "qaLyJoyboP261mSZqTHS8qDhhox1vKhT"
             - name: AUTH_ISSUER
               value: /auth/realms/testrealm
-            # - name: NEXTAUTH_URL
-            #   value: http://192.168.1.77
             - name: NEXTAUTH_SECRET
               value: my-secret-goes-here-abc-123
             - name: END_SESSION_URL
               value: /auth/realms/testrealm/protocol/openid-connect/logout
             - name: REFRESH_TOKEN_URL
               value: /auth/realms/testrealm/protocol/openid-connect/token
-      
 ---
 apiVersion: v1
 kind: Service
@@ -49,38 +46,16 @@ spec:
       port: 3000
       targetPort: 3000
 ---
-apiVersion: networking.k8s.io/v1
-kind: Ingress
-metadata:
-  name: nginx-to-traefik
-  annotations:
-    #   nginx.ingress.kubernetes.io/rewrite-target: /$2
-    #   nginx.ingress.kubernetes.io/use-regex: "true"
-    nginx.ingress.kubernetes.io/proxy-buffer-size: "1000k"
-    nginx.ingress.kubernetes.io/proxy-body-size: 100m
-    nginx.ingress.kubernetes.io/proxy-buffers: "8 16k"
-
-spec:
-  ingressClassName: nginx
-  rules:
-    - http:
-        paths:
-          - path: /
-            pathType: ImplementationSpecific
-            backend:
-              service:
-                name: {{ .Release.Name }}-traefik
-                port:
-                  number: 80
----
 apiVersion: traefik.io/v1alpha1
 kind: IngressRoute
 metadata:
-  name: dashboard-frontend
+  name: dashboard-ingressroute
+  namespace: default
 spec:
   routes:
-    - match: PathPrefix(`/`)
+    - match: Host(`{{ .Values.httpHostname | replace "https://" "" }}`) && PathPrefix(`/`)
       kind: Rule
+      priority: 1
       middlewares:
         - name: keycloak
       services:

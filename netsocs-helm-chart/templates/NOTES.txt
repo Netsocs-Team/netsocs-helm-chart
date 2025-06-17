@@ -1,0 +1,27 @@
+🎉 Netsocs Helm Chart installed successfully!
+
+📋 Available Services:
+
+- Configuration Backend: {{ .Values.httpHostname }}/api/netsocs/module.configuration-v2
+- Dashboard Backend: {{ .Values.httpHostname }}/api/netsocs/module.dashboard-v2
+- Dashboard Frontend: {{ .Values.httpHostname }}/
+- Driver Hub: {{ .Values.httpHostname }}/api/netsocs/dh
+- Access Control: {{ .Values.httpHostname }}/api/netsocs/module.access_control
+- Automation: {{ .Values.httpHostname }}/api/netsocs/automation
+
+🔧 Traefik Configuration:
+✅ Traefik automatically configured to handle IngressRoutes
+✅ RBAC configured for Traefik CRD resources
+✅ hostPorts configured for direct access
+
+🌐 To access the services externally:
+Make sure Caddy is configured to redirect to:
+{{ .Values.httpHostname }} → localhost:8080
+
+🌐 NETSOCS Dashboard Frontend:
+URL: {{ .Values.httpHostname }}/
+
+📝 To check the status:
+kubectl get pods
+kubectl get ingressroutes
+kubectl get services
