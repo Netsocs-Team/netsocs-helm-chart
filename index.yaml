@@ -3,7 +3,7 @@ entries:
   netsocs-helm-chart:
   - apiVersion: v2
     appVersion: 2.0.2
-    created: "2025-06-18T21:40:20.182956072Z"
+    created: "2025-06-18T22:08:42.591319223Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -17,7 +17,7 @@ entries:
     version: 2.0.2
   - apiVersion: v2
     appVersion: 2.0.1
-    created: "2025-06-18T21:40:20.173547775Z"
+    created: "2025-06-18T22:08:42.58360699Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -31,7 +31,7 @@ entries:
     version: 2.0.1
   - apiVersion: v2
     appVersion: 1.2.3
-    created: "2025-06-18T21:40:20.165671739Z"
+    created: "2025-06-18T22:08:42.575786357Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -44,8 +44,22 @@ entries:
     - charts/netsocs-helm-chart-1.2.3.tgz
     version: 1.2.3
   - apiVersion: v2
+    appVersion: 1.1.2
+    created: "2025-06-18T22:08:42.568185243Z"
+    dependencies:
+    - name: traefik
+      repository: https://traefik.github.io/charts
+      version: 34.2.0
+    description: A helm chart for deploy Netsocs Software
+    digest: fae6ee758218ef989a01cb4d23c97bce8bf8cac810e0a09bd1d042df1fd8735e
+    name: netsocs-helm-chart
+    type: application
+    urls:
+    - charts/netsocs-helm-chart-1.1.2.tgz
+    version: 1.1.2
+  - apiVersion: v2
     appVersion: 1.1.1
-    created: "2025-06-18T21:40:20.154517057Z"
+    created: "2025-06-18T22:08:42.560333589Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -59,7 +73,7 @@ entries:
     version: 1.1.1
   - apiVersion: v2
     appVersion: 0.0.1
-    created: "2025-06-18T21:40:20.146562891Z"
+    created: "2025-06-18T22:08:42.55178425Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -71,4 +85,4 @@ entries:
     urls:
     - charts/netsocs-helm-chart-0.0.1.tgz
     version: 0.0.1
-generated: "2025-06-18T21:40:20.137073824Z"
+generated: "2025-06-18T22:08:42.543076215Z"
