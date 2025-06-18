@@ -3,7 +3,7 @@ entries:
   netsocs-helm-chart:
   - apiVersion: v2
     appVersion: 2.0.2
-    created: "2025-06-17T20:10:37.373609Z"
+    created: "2025-06-18T21:40:20.182956072Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -17,7 +17,7 @@ entries:
     version: 2.0.2
   - apiVersion: v2
     appVersion: 2.0.1
-    created: "2025-06-17T20:10:37.365939818Z"
+    created: "2025-06-18T21:40:20.173547775Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -31,7 +31,7 @@ entries:
     version: 2.0.1
   - apiVersion: v2
     appVersion: 1.2.3
-    created: "2025-06-17T20:10:37.357893665Z"
+    created: "2025-06-18T21:40:20.165671739Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -44,8 +44,22 @@ entries:
     - charts/netsocs-helm-chart-1.2.3.tgz
     version: 1.2.3
   - apiVersion: v2
+    appVersion: 1.1.1
+    created: "2025-06-18T21:40:20.154517057Z"
+    dependencies:
+    - name: traefik
+      repository: https://traefik.github.io/charts
+      version: 34.2.0
+    description: A helm chart for deploy Netsocs Software
+    digest: 00f0b08326fe6377ffdf213a426547df85a07d499d7b4fc8fdc449a864a3a01e
+    name: netsocs-helm-chart
+    type: application
+    urls:
+    - charts/netsocs-helm-chart-1.1.1.tgz
+    version: 1.1.1
+  - apiVersion: v2
     appVersion: 0.0.1
-    created: "2025-06-17T20:10:37.349534731Z"
+    created: "2025-06-18T21:40:20.146562891Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -57,4 +71,4 @@ entries:
     urls:
     - charts/netsocs-helm-chart-0.0.1.tgz
     version: 0.0.1
-generated: "2025-06-17T20:10:37.341455597Z"
+generated: "2025-06-18T21:40:20.137073824Z"
