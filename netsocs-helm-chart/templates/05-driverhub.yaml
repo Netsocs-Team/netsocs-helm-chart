@@ -18,7 +18,7 @@ spec:
                 - name: docker-cred
             containers:
                 - name: netsocs-driverhub
-                  image: {{ .Values.registry }}/service.driver_hub/backend:sha:f7435d07f01b0659edbefec3cae09a630741c5b2
+                  image: {{ .Values.registry }}/service.driver_hub/backend:703d15e4aeb6514bdc13c112b3921a77d8c47271
                   imagePullPolicy: {{ .Values.imagePullPolicy }}
                   ports:
                       - containerPort: 3196
@@ -72,8 +72,13 @@ spec:
                             key:  MONGO_URI
                       - name: MEDIAMTX_DEFAULT_HOSTNAME
                         value: mediamtx-service
-
-                
+                  volumeMounts:
+                    - name: driverhub-static-pv
+                      mountPath: /app/static/
+            volumes:
+              - name: driverhub-static-pv
+                persistentVolumeClaim:
+                  claimName: driverhub-static-pvc
 ---
 apiVersion: v1
 kind: Service
@@ -136,3 +141,27 @@ spec:
       services:
         - name: netsocs-driverhub-service
           port: 3196
+---
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: driverhub-static-pv
+spec:
+  capacity:
+    storage: 1Gi
+  accessModes:
+    - ReadWriteOnce
+  hostPath:
+    path: /mnt/netsocs/static-driverhub   # Directorio en el nodo donde se almacenarán los archivos estáticos
+  persistentVolumeReclaimPolicy: Retain
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: driverhub-static-pvc
+spec:
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 1Gi
