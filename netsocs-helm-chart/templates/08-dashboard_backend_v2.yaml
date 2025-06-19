@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: netsocs-modules-dashboard-backend-v2
-          image: {{ .Values.registry }}/module.dashboard/backendv2:c0e5e79ae52b98d2349087279c78694ccac6785d
+          image: {{ .Values.registry }}/module.dashboard/backendv2:sha:6e6d8c3935e7b16e2039e5535785ae15d8cb8e5c
           imagePullPolicy: {{ .Values.imagePullPolicy }}
           ports:
             - containerPort: 3010
