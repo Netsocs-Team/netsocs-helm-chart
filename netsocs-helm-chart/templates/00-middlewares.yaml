@@ -12,6 +12,7 @@ spec:
       Scope: profile email
       TokenCookieName: NETSOCS_SESSION_USERID
       InsecureSkipVerify: {{ .Values.skipInsecure }}
+      IgnorePathPrefixes: "/api/netsocs/module.configuration-v2/auth/login,/api/netsocs/dh/auth/connection"
 ---
 apiVersion: traefik.io/v1alpha1
 kind: Middleware
