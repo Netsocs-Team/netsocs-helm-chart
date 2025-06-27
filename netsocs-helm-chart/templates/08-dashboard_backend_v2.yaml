@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: netsocs-modules-dashboard-backend-v2
-          image: {{ .Values.registry }}/module.dashboard/backendv2:sha:1e5ef31d85e3e4f14729f7817c8257698eca3f00
+          image: {{ .Values.registry }}/module.dashboard/backendv2:feat-v2
           imagePullPolicy: {{ .Values.imagePullPolicy }}
           ports:
             - containerPort: 3010
@@ -104,6 +104,7 @@ spec:
       middlewares:
         - name: keycloak
         - name: dashboard-backend-v2-stripprefix
+        - name: sec-headers
       services:
         - name: netsocs-modules-dashboard-backend-service-v2
           port: 3000

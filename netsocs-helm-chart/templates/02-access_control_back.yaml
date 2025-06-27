@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: netsocs-modules-accesscontrol-backend
-          image: {{ .Values.registry }}/module.access_control/backend:sha:4a499e954cd2759493a7c55662e67cac14601f81
+          image: {{ .Values.registry }}/module.access_control/backend:dev
           imagePullPolicy: {{ .Values.imagePullPolicy }}
           ports:
             - containerPort: 3000
@@ -129,6 +129,7 @@ spec:
       kind: Rule
       middlewares:
         - name: strip-prefix-access
+        - name: sec-headers
       services:
         - name: netsocs-modules-accesscontrol-backend-service
           port: 3000

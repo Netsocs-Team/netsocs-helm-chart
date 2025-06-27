@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: netsocs-modules-configuration-frontend
-          image: {{ .Values.registry }}/module.configuration/frontend:sha:cd88013d77afb997a7eec0aca2378c1494af1d46
+          image: {{ .Values.registry }}/module.configuration/frontend:dev
           imagePullPolicy: {{ .Values.imagePullPolicy }}
           ports:
             - containerPort: 3690
@@ -46,6 +46,7 @@ spec:
       kind: Rule
       middlewares:
         - name: keycloak
+        - name: sec-headers
       services:
         - name: netsocs-modules-configuration-frontend-service
           port: 3690

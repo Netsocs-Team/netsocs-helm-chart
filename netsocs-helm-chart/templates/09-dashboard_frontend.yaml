@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: netsocs-modules-dashboard-frontend
-          image: {{ .Values.registry }}/module.dashboard/frontend:sha:d728cc9a445ffd931302897cc548f854c60d95b1
+          image: {{ .Values.registry }}/module.dashboard/frontend:feat-v2
           imagePullPolicy: {{ .Values.imagePullPolicy }}
           ports:
             - containerPort: 3000
@@ -58,6 +58,7 @@ spec:
       priority: 1
       middlewares:
         - name: keycloak
+        - name: sec-headers
       services:
         - name: netsocs-modules-dashboard-frontend-service
           port: 3000
