@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: netsocs-modules-configuration-backendv2
-          image: {{ .Values.registry }}/module.configuration/backend_v2:dev
+          image: {{ .Values.registry }}/module.configuration/backend_v2:main
           imagePullPolicy: {{ .Values.imagePullPolicy }}          
           ports:
             - name: http
