@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: keycloak
-          image: {{ .Values.registry }}/service.kc/main:41bd5d120f2946c29521a942f76ca2aebcdb0800
+          image: {{ .Values.registry }}/service.kc/main:c5e69dd293ccac44f84cf85f9953381c98609df4
           imagePullPolicy: {{ .Values.imagePullPolicy }}
           ports:
             - containerPort: 8443
