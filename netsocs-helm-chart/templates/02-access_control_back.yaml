@@ -62,6 +62,8 @@ spec:
               value: "p4ssword"
             - name: DRIVERHUB_URL
               value: http://netsocs-driverhub-service:3196
+            - name: CONFIG_MODULE_API_V2_URL
+              value: http://netsocs-modules-configuration-backendv2-service:3091/api/v2
             - name: STATIC_FOLDER
               value: static
           volumeMounts:
