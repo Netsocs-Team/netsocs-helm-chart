@@ -65,6 +65,8 @@ spec:
               value: {{ .Values.keycloak.adminUserName }}
             - name: KEYCLOACK_ADMIN_PASSWORD
               value: {{ .Values.keycloak.adminPassword }}
+            - name: NETSOCS_VERSION
+              value: {{ .Values.version }}
       
 ---
 apiVersion: v1
