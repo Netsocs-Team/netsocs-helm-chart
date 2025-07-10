@@ -22,17 +22,12 @@ on:
         description: 'New sha of the service'
         required: true
         type: string
-      netsocs_version:
-        description: 'Netsocs version'
-        required: true
-        type: string
 jobs:
   log-the-inputs:
     runs-on: ubuntu-latest
     steps:
       - run: |
           echo "Version: ${{ inputs.version }}"
-          echo "Netsocs version: ${{ inputs.netsocs_version }}"
     
   set-app-version:
     runs-on: ubuntu-latest
@@ -45,7 +40,7 @@ jobs:
           sed -i 's/^appVersion: .*/appVersion: ${{ inputs.version }}/' netsocs-helm-chart/Chart.yaml
           chmod +x update-sha.sh
           ./update-sha.sh ${{ inputs.service_type }} ${{ inputs.new_sha }}
-          ./update-version.sh ${{ inputs.netsocs_version }}
+          ./update-version.sh ${{ inputs.version }}
       - uses: azure/setup-helm@v4.3.0
       - name: Package chart
         run: |
