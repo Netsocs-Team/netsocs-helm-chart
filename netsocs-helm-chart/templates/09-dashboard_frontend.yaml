@@ -53,11 +53,21 @@ metadata:
   namespace: default
 spec:
   routes:
-    - match: Host(`{{ .Values.httpHostname | replace "https://" "" }}`) && PathPrefix(`/`)
+    - match: PathPrefix(`/`)
       kind: Rule
       priority: 1
       middlewares:
         - name: keycloak
+      services:
+        - name: netsocs-modules-dashboard-frontend-service
+          port: 3000
+    - match: PathPrefix(`/access_control/visits`)
+      kind: Rule
+      services:
+        - name: netsocs-modules-dashboard-frontend-service
+          port: 3000
+    - match: PathPrefix(`/_next`)
+      kind: Rule
       services:
         - name: netsocs-modules-dashboard-frontend-service
           port: 3000
