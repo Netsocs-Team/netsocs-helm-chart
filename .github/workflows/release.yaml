@@ -39,6 +39,7 @@ jobs:
           sed -i 's/^version: .*/version: ${{ inputs.version }}/' netsocs-helm-chart/Chart.yaml
           sed -i 's/^appVersion: .*/appVersion: ${{ inputs.version }}/' netsocs-helm-chart/Chart.yaml
           chmod +x update-sha.sh
+          chmod +x update-version.sh
           ./update-sha.sh ${{ inputs.service_type }} ${{ inputs.new_sha }}
           ./update-version.sh ${{ inputs.version }}
       - uses: azure/setup-helm@v4.3.0
