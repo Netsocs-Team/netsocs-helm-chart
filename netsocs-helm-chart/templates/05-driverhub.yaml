@@ -71,7 +71,7 @@ spec:
                             name: {{ .Release.Name }}-netsocs-configurations
                             key:  MONGO_URI
                       - name: MEDIAMTX_DEFAULT_HOSTNAME
-                        value: mediamtx-service
+                        value: {{ .Values.mediamtxHostname }}
                   volumeMounts:
                     - name: driverhub-static-pv
                       mountPath: /app/static/
