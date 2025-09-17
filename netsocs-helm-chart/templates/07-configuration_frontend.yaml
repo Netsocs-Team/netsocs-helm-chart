@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: netsocs-modules-configuration-frontend
-          image: {{ .Values.registry }}/module.configuration/frontend:9cb33ba50b60f2a1a03ee75cfac13201a2555900
+          image: {{ .Values.registry }}/module.configuration/frontend:d2ac33df8a19df8bb5475f4aed95c364f31d0a4e
           imagePullPolicy: {{ .Values.imagePullPolicy }}
           ports:
             - containerPort: 3690
