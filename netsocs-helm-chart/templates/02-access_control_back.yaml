@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: netsocs-modules-accesscontrol-backend
-          image: {{ .Values.registry }}/module.access_control/backend:27a57ce79a8035551218eb99f4c7c6ab41d79113
+          image: {{ .Values.registry }}/module.access_control/backend:e73b28f93f65cdbe5c61ed6e315a441375863cbe
           imagePullPolicy: {{ .Values.imagePullPolicy }}
           ports:
             - containerPort: 3000
