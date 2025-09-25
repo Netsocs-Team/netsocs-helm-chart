@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: netsocs-modules-dashboard-frontend
-          image: {{ .Values.registry }}/module.dashboard/frontend:2dba06a5c83aa202d6c8d3525b5cbe53ecb2ff4e
+          image: {{ .Values.registry }}/module.dashboard/frontend:79f7a9c247caa324428ada3443592e6798852d1b
           imagePullPolicy: {{ .Values.imagePullPolicy }}
           ports:
             - containerPort: 3000
