@@ -2,8 +2,22 @@ apiVersion: v1
 entries:
   netsocs-helm-chart:
   - apiVersion: v2
+    appVersion: 3.432.0
+    created: "2025-10-13T15:33:07.046105905Z"
+    dependencies:
+    - name: traefik
+      repository: https://traefik.github.io/charts
+      version: 34.2.0
+    description: A helm chart for deploy Netsocs Software
+    digest: ee82ea2565fcb4040099aedb5e962a7c92a101fb822f599b5efc7b40c69ce93e
+    name: netsocs-helm-chart
+    type: application
+    urls:
+    - charts/netsocs-helm-chart-3.432.0.tgz
+    version: 3.432.0
+  - apiVersion: v2
     appVersion: 3.431.1
-    created: "2025-10-13T15:00:02.206806977Z"
+    created: "2025-10-13T15:33:07.038632951Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -17,7 +31,7 @@ entries:
     version: 3.431.1
   - apiVersion: v2
     appVersion: 3.431.0
-    created: "2025-10-13T15:00:02.199459996Z"
+    created: "2025-10-13T15:33:07.030595004Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -31,7 +45,7 @@ entries:
     version: 3.431.0
   - apiVersion: v2
     appVersion: 3.429.0
-    created: "2025-10-13T15:00:02.174790554Z"
+    created: "2025-10-13T15:33:07.00455504Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -45,7 +59,7 @@ entries:
     version: 3.429.0
   - apiVersion: v2
     appVersion: 3.425.0
-    created: "2025-10-13T15:00:02.166672183Z"
+    created: "2025-10-13T15:33:06.996903355Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -59,7 +73,7 @@ entries:
     version: 3.425.0
   - apiVersion: v2
     appVersion: 3.424.0
-    created: "2025-10-13T15:00:02.158016971Z"
+    created: "2025-10-13T15:33:06.988991384Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -73,7 +87,7 @@ entries:
     version: 3.424.0
   - apiVersion: v2
     appVersion: 3.423.0
-    created: "2025-10-13T15:00:02.149527822Z"
+    created: "2025-10-13T15:33:06.981001942Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -87,7 +101,7 @@ entries:
     version: 3.423.0
   - apiVersion: v2
     appVersion: 3.417.0
-    created: "2025-10-13T15:00:02.117114788Z"
+    created: "2025-10-13T15:33:06.948855093Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -101,7 +115,7 @@ entries:
     version: 3.417.0
   - apiVersion: v2
     appVersion: 3.415.1
-    created: "2025-10-13T15:00:02.108936555Z"
+    created: "2025-10-13T15:33:06.940756056Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -115,7 +129,7 @@ entries:
     version: 3.415.1
   - apiVersion: v2
     appVersion: 3.415.0
-    created: "2025-10-13T15:00:02.100738872Z"
+    created: "2025-10-13T15:33:06.932747231Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -129,7 +143,7 @@ entries:
     version: 3.415.0
   - apiVersion: v2
     appVersion: 3.414.0
-    created: "2025-10-13T15:00:02.092505869Z"
+    created: "2025-10-13T15:33:06.924820968Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -143,7 +157,7 @@ entries:
     version: 3.414.0
   - apiVersion: v2
     appVersion: 3.411.0
-    created: "2025-10-13T15:00:02.084294662Z"
+    created: "2025-10-13T15:33:06.916963469Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -157,7 +171,7 @@ entries:
     version: 3.411.0
   - apiVersion: v2
     appVersion: 3.43.1
-    created: "2025-10-13T15:00:02.191172247Z"
+    created: "2025-10-13T15:33:07.021525518Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -171,7 +185,7 @@ entries:
     version: 3.43.1
   - apiVersion: v2
     appVersion: 3.43.0
-    created: "2025-10-13T15:00:02.183142764Z"
+    created: "2025-10-13T15:33:07.012458228Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -185,7 +199,7 @@ entries:
     version: 3.43.0
   - apiVersion: v2
     appVersion: 3.42.3
-    created: "2025-10-13T15:00:02.140446191Z"
+    created: "2025-10-13T15:33:06.973095117Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -199,7 +213,7 @@ entries:
     version: 3.42.3
   - apiVersion: v2
     appVersion: 3.42.1
-    created: "2025-10-13T15:00:02.132825055Z"
+    created: "2025-10-13T15:33:06.965136903Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -213,7 +227,7 @@ entries:
     version: 3.42.1
   - apiVersion: v2
     appVersion: 3.42.0
-    created: "2025-10-13T15:00:02.12540138Z"
+    created: "2025-10-13T15:33:06.957099477Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -227,7 +241,7 @@ entries:
     version: 3.42.0
   - apiVersion: v2
     appVersion: 3.41.2
-    created: "2025-10-13T15:00:02.07587559Z"
+    created: "2025-10-13T15:33:06.907927665Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -241,7 +255,7 @@ entries:
     version: 3.41.2
   - apiVersion: v2
     appVersion: 3.41.1
-    created: "2025-10-13T15:00:02.06768228Z"
+    created: "2025-10-13T15:33:06.898866293Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -255,7 +269,7 @@ entries:
     version: 3.41.1
   - apiVersion: v2
     appVersion: 3.41.0
-    created: "2025-10-13T15:00:02.05868704Z"
+    created: "2025-10-13T15:33:06.891557106Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -269,7 +283,7 @@ entries:
     version: 3.41.0
   - apiVersion: v2
     appVersion: 3.40.0
-    created: "2025-10-13T15:00:02.049125728Z"
+    created: "2025-10-13T15:33:06.883943161Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -283,7 +297,7 @@ entries:
     version: 3.40.0
   - apiVersion: v2
     appVersion: 3.39.2
-    created: "2025-10-13T15:00:02.033348273Z"
+    created: "2025-10-13T15:33:06.86781343Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -297,7 +311,7 @@ entries:
     version: 3.39.2
   - apiVersion: v2
     appVersion: 3.39.0
-    created: "2025-10-13T15:00:02.025086596Z"
+    created: "2025-10-13T15:33:06.859508032Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -311,7 +325,7 @@ entries:
     version: 3.39.0
   - apiVersion: v2
     appVersion: 3.38.1
-    created: "2025-10-13T15:00:02.017149462Z"
+    created: "2025-10-13T15:33:06.851083645Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -325,7 +339,7 @@ entries:
     version: 3.38.1
   - apiVersion: v2
     appVersion: 3.38.0
-    created: "2025-10-13T15:00:02.009149841Z"
+    created: "2025-10-13T15:33:06.842811449Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -339,7 +353,7 @@ entries:
     version: 3.38.0
   - apiVersion: v2
     appVersion: 3.37.1
-    created: "2025-10-13T15:00:02.00117735Z"
+    created: "2025-10-13T15:33:06.834380602Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -353,7 +367,7 @@ entries:
     version: 3.37.1
   - apiVersion: v2
     appVersion: 3.37.0
-    created: "2025-10-13T15:00:01.993235209Z"
+    created: "2025-10-13T15:33:06.82516841Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -367,7 +381,7 @@ entries:
     version: 3.37.0
   - apiVersion: v2
     appVersion: 3.32.1
-    created: "2025-10-13T15:00:01.985195707Z"
+    created: "2025-10-13T15:33:06.817722172Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -381,7 +395,7 @@ entries:
     version: 3.32.1
   - apiVersion: v2
     appVersion: 3.32.0
-    created: "2025-10-13T15:00:01.976928518Z"
+    created: "2025-10-13T15:33:06.809518937Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -395,7 +409,7 @@ entries:
     version: 3.32.0
   - apiVersion: v2
     appVersion: 3.31.1
-    created: "2025-10-13T15:00:01.968775922Z"
+    created: "2025-10-13T15:33:06.800273497Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -409,7 +423,7 @@ entries:
     version: 3.31.1
   - apiVersion: v2
     appVersion: 3.31.0
-    created: "2025-10-13T15:00:01.960472619Z"
+    created: "2025-10-13T15:33:06.793009598Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -423,7 +437,7 @@ entries:
     version: 3.31.0
   - apiVersion: v2
     appVersion: 3.30.0
-    created: "2025-10-13T15:00:01.952384624Z"
+    created: "2025-10-13T15:33:06.785771084Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -437,7 +451,7 @@ entries:
     version: 3.30.0
   - apiVersion: v2
     appVersion: 3.29.0
-    created: "2025-10-13T15:00:01.927767064Z"
+    created: "2025-10-13T15:33:06.761744858Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -451,7 +465,7 @@ entries:
     version: 3.29.0
   - apiVersion: v2
     appVersion: 3.28.1
-    created: "2025-10-13T15:00:01.919182554Z"
+    created: "2025-10-13T15:33:06.753827793Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -465,7 +479,7 @@ entries:
     version: 3.28.1
   - apiVersion: v2
     appVersion: 3.28.0
-    created: "2025-10-13T15:00:01.910094494Z"
+    created: "2025-10-13T15:33:06.74597696Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -479,7 +493,7 @@ entries:
     version: 3.28.0
   - apiVersion: v2
     appVersion: 3.27.3
-    created: "2025-10-13T15:00:01.902657244Z"
+    created: "2025-10-13T15:33:06.737972964Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -493,7 +507,7 @@ entries:
     version: 3.27.3
   - apiVersion: v2
     appVersion: 3.27.0
-    created: "2025-10-13T15:00:01.894272883Z"
+    created: "2025-10-13T15:33:06.730082067Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -507,7 +521,7 @@ entries:
     version: 3.27.0
   - apiVersion: v2
     appVersion: 3.26.0
-    created: "2025-10-13T15:00:01.885207452Z"
+    created: "2025-10-13T15:33:06.722144589Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -521,7 +535,7 @@ entries:
     version: 3.26.0
   - apiVersion: v2
     appVersion: 3.25.0
-    created: "2025-10-13T15:00:01.875756651Z"
+    created: "2025-10-13T15:33:06.714037131Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -535,7 +549,7 @@ entries:
     version: 3.25.0
   - apiVersion: v2
     appVersion: 3.20.1
-    created: "2025-10-13T15:00:01.868589437Z"
+    created: "2025-10-13T15:33:06.70573306Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -549,7 +563,7 @@ entries:
     version: 3.20.1
   - apiVersion: v2
     appVersion: 3.20.0
-    created: "2025-10-13T15:00:01.860251392Z"
+    created: "2025-10-13T15:33:06.697644787Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -563,7 +577,7 @@ entries:
     version: 3.20.0
   - apiVersion: v2
     appVersion: 3.18.0
-    created: "2025-10-13T15:00:01.843651545Z"
+    created: "2025-10-13T15:33:06.681697746Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -577,7 +591,7 @@ entries:
     version: 3.18.0
   - apiVersion: v2
     appVersion: 3.17.2
-    created: "2025-10-13T15:00:01.835393469Z"
+    created: "2025-10-13T15:33:06.673299627Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -591,7 +605,7 @@ entries:
     version: 3.17.2
   - apiVersion: v2
     appVersion: 3.17.1
-    created: "2025-10-13T15:00:01.826960122Z"
+    created: "2025-10-13T15:33:06.664297989Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -605,7 +619,7 @@ entries:
     version: 3.17.1
   - apiVersion: v2
     appVersion: 3.17.0
-    created: "2025-10-13T15:00:01.818434239Z"
+    created: "2025-10-13T15:33:06.656959293Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -619,7 +633,7 @@ entries:
     version: 3.17.0
   - apiVersion: v2
     appVersion: 3.15.1
-    created: "2025-10-13T15:00:01.810002508Z"
+    created: "2025-10-13T15:33:06.649784737Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -633,7 +647,7 @@ entries:
     version: 3.15.1
   - apiVersion: v2
     appVersion: 3.15.0
-    created: "2025-10-13T15:00:01.801443096Z"
+    created: "2025-10-13T15:33:06.641876413Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -647,7 +661,7 @@ entries:
     version: 3.15.0
   - apiVersion: v2
     appVersion: 3.14.0
-    created: "2025-10-13T15:00:01.7932473Z"
+    created: "2025-10-13T15:33:06.633963332Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -661,7 +675,7 @@ entries:
     version: 3.14.0
   - apiVersion: v2
     appVersion: 3.13.0
-    created: "2025-10-13T15:00:01.784844804Z"
+    created: "2025-10-13T15:33:06.626199535Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -675,7 +689,7 @@ entries:
     version: 3.13.0
   - apiVersion: v2
     appVersion: 3.12.0
-    created: "2025-10-13T15:00:01.776009765Z"
+    created: "2025-10-13T15:33:06.618560273Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -689,7 +703,7 @@ entries:
     version: 3.12.0
   - apiVersion: v2
     appVersion: 3.4.0
-    created: "2025-10-13T15:00:02.041625049Z"
+    created: "2025-10-13T15:33:06.875803527Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -703,7 +717,7 @@ entries:
     version: 3.4.0
   - apiVersion: v2
     appVersion: 3.3.1
-    created: "2025-10-13T15:00:01.944270051Z"
+    created: "2025-10-13T15:33:06.777828982Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -717,7 +731,7 @@ entries:
     version: 3.3.1
   - apiVersion: v2
     appVersion: 3.3.0
-    created: "2025-10-13T15:00:01.936226425Z"
+    created: "2025-10-13T15:33:06.77004749Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -731,7 +745,7 @@ entries:
     version: 3.3.0
   - apiVersion: v2
     appVersion: 3.2.0
-    created: "2025-10-13T15:00:01.852012678Z"
+    created: "2025-10-13T15:33:06.689828926Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -745,7 +759,7 @@ entries:
     version: 3.2.0
   - apiVersion: v2
     appVersion: 3.1.0
-    created: "2025-10-13T15:00:01.766455179Z"
+    created: "2025-10-13T15:33:06.610417879Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -759,7 +773,7 @@ entries:
     version: 3.1.0
   - apiVersion: v2
     appVersion: 3.0.0
-    created: "2025-10-13T15:00:01.759150817Z"
+    created: "2025-10-13T15:33:06.602797884Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -773,7 +787,7 @@ entries:
     version: 3.0.0
   - apiVersion: v2
     appVersion: 2.11347.0
-    created: "2025-10-13T15:00:00.313913187Z"
+    created: "2025-10-13T15:33:05.203014821Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -787,7 +801,7 @@ entries:
     version: 2.11347.0
   - apiVersion: v2
     appVersion: 2.11346.0
-    created: "2025-10-13T15:00:00.301666293Z"
+    created: "2025-10-13T15:33:05.194443154Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -801,7 +815,7 @@ entries:
     version: 2.11346.0
   - apiVersion: v2
     appVersion: 2.11345.0
-    created: "2025-10-13T15:00:00.289549182Z"
+    created: "2025-10-13T15:33:05.185573983Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -815,7 +829,7 @@ entries:
     version: 2.11345.0
   - apiVersion: v2
     appVersion: 2.11344.0
-    created: "2025-10-13T15:00:00.282321393Z"
+    created: "2025-10-13T15:33:05.178689059Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -829,7 +843,7 @@ entries:
     version: 2.11344.0
   - apiVersion: v2
     appVersion: 2.11343.0
-    created: "2025-10-13T15:00:00.273931929Z"
+    created: "2025-10-13T15:33:05.170572256Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -843,7 +857,7 @@ entries:
     version: 2.11343.0
   - apiVersion: v2
     appVersion: 2.11342.0
-    created: "2025-10-13T15:00:00.265546588Z"
+    created: "2025-10-13T15:33:05.16275066Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -857,7 +871,7 @@ entries:
     version: 2.11342.0
   - apiVersion: v2
     appVersion: 2.11341.2
-    created: "2025-10-13T15:00:00.256848527Z"
+    created: "2025-10-13T15:33:05.154604059Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -871,7 +885,7 @@ entries:
     version: 2.11341.2
   - apiVersion: v2
     appVersion: 2.11341.1
-    created: "2025-10-13T15:00:00.248205026Z"
+    created: "2025-10-13T15:33:05.146730555Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -885,7 +899,7 @@ entries:
     version: 2.11341.1
   - apiVersion: v2
     appVersion: 2.11341.0
-    created: "2025-10-13T15:00:00.241025429Z"
+    created: "2025-10-13T15:33:05.138407257Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -899,7 +913,7 @@ entries:
     version: 2.11341.0
   - apiVersion: v2
     appVersion: 2.11340.0
-    created: "2025-10-13T15:00:00.232824402Z"
+    created: "2025-10-13T15:33:05.129830903Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -913,7 +927,7 @@ entries:
     version: 2.11340.0
   - apiVersion: v2
     appVersion: 2.11339.0
-    created: "2025-10-13T15:00:00.224190663Z"
+    created: "2025-10-13T15:33:05.120370465Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -927,7 +941,7 @@ entries:
     version: 2.11339.0
   - apiVersion: v2
     appVersion: 2.11338.0
-    created: "2025-10-13T15:00:00.215643567Z"
+    created: "2025-10-13T15:33:05.107721785Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -941,7 +955,7 @@ entries:
     version: 2.11338.0
   - apiVersion: v2
     appVersion: 2.11337.0
-    created: "2025-10-13T15:00:00.207132286Z"
+    created: "2025-10-13T15:33:05.096949879Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -955,7 +969,7 @@ entries:
     version: 2.11337.0
   - apiVersion: v2
     appVersion: 2.11336.0
-    created: "2025-10-13T15:00:00.197782362Z"
+    created: "2025-10-13T15:33:05.084578795Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -969,7 +983,7 @@ entries:
     version: 2.11336.0
   - apiVersion: v2
     appVersion: 2.11335.0
-    created: "2025-10-13T15:00:00.190112297Z"
+    created: "2025-10-13T15:33:05.075684895Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -983,7 +997,7 @@ entries:
     version: 2.11335.0
   - apiVersion: v2
     appVersion: 2.11334.1
-    created: "2025-10-13T15:00:00.182563247Z"
+    created: "2025-10-13T15:33:05.067361614Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -997,7 +1011,7 @@ entries:
     version: 2.11334.1
   - apiVersion: v2
     appVersion: 2.11334.0
-    created: "2025-10-13T15:00:00.173605314Z"
+    created: "2025-10-13T15:33:05.05522995Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -1011,7 +1025,7 @@ entries:
     version: 2.11334.0
   - apiVersion: v2
     appVersion: 2.11333.1
-    created: "2025-10-13T15:00:00.164496386Z"
+    created: "2025-10-13T15:33:05.04584882Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -1025,7 +1039,7 @@ entries:
     version: 2.11333.1
   - apiVersion: v2
     appVersion: 2.11333.0
-    created: "2025-10-13T15:00:00.157325234Z"
+    created: "2025-10-13T15:33:05.037275952Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -1039,7 +1053,7 @@ entries:
     version: 2.11333.0
   - apiVersion: v2
     appVersion: 2.11330.1
-    created: "2025-10-13T15:00:00.149261995Z"
+    created: "2025-10-13T15:33:05.028760996Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -1053,7 +1067,7 @@ entries:
     version: 2.11330.1
   - apiVersion: v2
     appVersion: 2.11330.0
-    created: "2025-10-13T15:00:00.141104211Z"
+    created: "2025-10-13T15:33:05.020159115Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -1067,7 +1081,7 @@ entries:
     version: 2.11330.0
   - apiVersion: v2
     appVersion: 2.10997.2
-    created: "2025-10-13T15:00:00.091288223Z"
+    created: "2025-10-13T15:33:04.973208192Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -1081,7 +1095,7 @@ entries:
     version: 2.10997.2
   - apiVersion: v2
     appVersion: 2.10997.1
-    created: "2025-10-13T15:00:00.08299365Z"
+    created: "2025-10-13T15:33:04.964594107Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -1095,7 +1109,7 @@ entries:
     version: 2.10997.1
   - apiVersion: v2
     appVersion: 2.10997.0
-    created: "2025-10-13T15:00:00.074712516Z"
+    created: "2025-10-13T15:33:04.956389991Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -1109,7 +1123,7 @@ entries:
     version: 2.10997.0
   - apiVersion: v2
     appVersion: 2.10666.0
-    created: "2025-10-13T15:00:00.061655488Z"
+    created: "2025-10-13T15:33:04.947808074Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -1123,7 +1137,7 @@ entries:
     version: 2.10666.0
   - apiVersion: v2
     appVersion: 2.10335.2
-    created: "2025-10-13T15:00:00.051545342Z"
+    created: "2025-10-13T15:33:04.939313621Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -1137,7 +1151,7 @@ entries:
     version: 2.10335.2
   - apiVersion: v2
     appVersion: 2.10335.1
-    created: "2025-10-13T15:00:00.038745546Z"
+    created: "2025-10-13T15:33:04.932363525Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -1151,7 +1165,7 @@ entries:
     version: 2.10335.1
   - apiVersion: v2
     appVersion: 2.10335.0
-    created: "2025-10-13T15:00:00.028731871Z"
+    created: "2025-10-13T15:33:04.924605045Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -1165,7 +1179,7 @@ entries:
     version: 2.10335.0
   - apiVersion: v2
     appVersion: 2.10334.0
-    created: "2025-10-13T15:00:00.019458665Z"
+    created: "2025-10-13T15:33:04.916958057Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -1179,7 +1193,7 @@ entries:
     version: 2.10334.0
   - apiVersion: v2
     appVersion: 2.10003.0
-    created: "2025-10-13T15:00:00.009857422Z"
+    created: "2025-10-13T15:33:04.908833833Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -1193,7 +1207,7 @@ entries:
     version: 2.10003.0
   - apiVersion: v2
     appVersion: 2.9673.0
-    created: "2025-10-13T15:00:01.750931575Z"
+    created: "2025-10-13T15:33:06.595024054Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -1207,7 +1221,7 @@ entries:
     version: 2.9673.0
   - apiVersion: v2
     appVersion: 2.9344.0
-    created: "2025-10-13T15:00:01.734613555Z"
+    created: "2025-10-13T15:33:06.577904565Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -1221,7 +1235,7 @@ entries:
     version: 2.9344.0
   - apiVersion: v2
     appVersion: 2.9343.0
-    created: "2025-10-13T15:00:01.726331835Z"
+    created: "2025-10-13T15:33:06.569137202Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -1235,7 +1249,7 @@ entries:
     version: 2.9343.0
   - apiVersion: v2
     appVersion: 2.9015.0
-    created: "2025-10-13T15:00:01.718107328Z"
+    created: "2025-10-13T15:33:06.560646991Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -1249,7 +1263,7 @@ entries:
     version: 2.9015.0
   - apiVersion: v2
     appVersion: 2.8688.0
-    created: "2025-10-13T15:00:01.701709917Z"
+    created: "2025-10-13T15:33:06.546016731Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -1263,7 +1277,7 @@ entries:
     version: 2.8688.0
   - apiVersion: v2
     appVersion: 2.8687.0
-    created: "2025-10-13T15:00:01.693422949Z"
+    created: "2025-10-13T15:33:06.537553558Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -1277,7 +1291,7 @@ entries:
     version: 2.8687.0
   - apiVersion: v2
     appVersion: 2.8361.0
-    created: "2025-10-13T15:00:01.68526104Z"
+    created: "2025-10-13T15:33:06.528856344Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -1291,7 +1305,7 @@ entries:
     version: 2.8361.0
   - apiVersion: v2
     appVersion: 2.8036.0
-    created: "2025-10-13T15:00:01.67707603Z"
+    created: "2025-10-13T15:33:06.521958106Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -1305,7 +1319,7 @@ entries:
     version: 2.8036.0
   - apiVersion: v2
     appVersion: 2.7713.0
-    created: "2025-10-13T15:00:01.659562412Z"
+    created: "2025-10-13T15:33:06.505715629Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -1319,7 +1333,7 @@ entries:
     version: 2.7713.0
   - apiVersion: v2
     appVersion: 2.7391.0
-    created: "2025-10-13T15:00:01.650643951Z"
+    created: "2025-10-13T15:33:06.497937167Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -1333,7 +1347,7 @@ entries:
     version: 2.7391.0
   - apiVersion: v2
     appVersion: 2.7074.0
-    created: "2025-10-13T15:00:01.643151918Z"
+    created: "2025-10-13T15:33:06.489063303Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -1347,7 +1361,7 @@ entries:
     version: 2.7074.0
   - apiVersion: v2
     appVersion: 2.6757.0
-    created: "2025-10-13T15:00:01.511386915Z"
+    created: "2025-10-13T15:33:06.363626586Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -1361,7 +1375,7 @@ entries:
     version: 2.6757.0
   - apiVersion: v2
     appVersion: 2.6440.0
-    created: "2025-10-13T15:00:01.494702778Z"
+    created: "2025-10-13T15:33:06.348147082Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -1375,7 +1389,7 @@ entries:
     version: 2.6440.0
   - apiVersion: v2
     appVersion: 2.6124.0
-    created: "2025-10-13T15:00:01.487680354Z"
+    created: "2025-10-13T15:33:06.340473188Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -1389,7 +1403,7 @@ entries:
     version: 2.6124.0
   - apiVersion: v2
     appVersion: 2.5809.0
-    created: "2025-10-13T15:00:01.44681163Z"
+    created: "2025-10-13T15:33:06.301295478Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -1403,7 +1417,7 @@ entries:
     version: 2.5809.0
   - apiVersion: v2
     appVersion: 2.5494.0
-    created: "2025-10-13T15:00:01.32437204Z"
+    created: "2025-10-13T15:33:06.180793126Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -1417,7 +1431,7 @@ entries:
     version: 2.5494.0
   - apiVersion: v2
     appVersion: 2.5183.0
-    created: "2025-10-13T15:00:01.249765881Z"
+    created: "2025-10-13T15:33:06.109726724Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -1431,7 +1445,7 @@ entries:
     version: 2.5183.0
   - apiVersion: v2
     appVersion: 2.4874.0
-    created: "2025-10-13T15:00:01.199228471Z"
+    created: "2025-10-13T15:33:06.06218058Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -1445,7 +1459,7 @@ entries:
     version: 2.4874.0
   - apiVersion: v2
     appVersion: 2.4566.7
-    created: "2025-10-13T15:00:01.166239721Z"
+    created: "2025-10-13T15:33:06.030829372Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -1459,7 +1473,7 @@ entries:
     version: 2.4566.7
   - apiVersion: v2
     appVersion: 2.4566.5
-    created: "2025-10-13T15:00:01.158153988Z"
+    created: "2025-10-13T15:33:06.022572045Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -1473,7 +1487,7 @@ entries:
     version: 2.4566.5
   - apiVersion: v2
     appVersion: 2.4566.4
-    created: "2025-10-13T15:00:01.150279286Z"
+    created: "2025-10-13T15:33:06.014840961Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -1487,7 +1501,7 @@ entries:
     version: 2.4566.4
   - apiVersion: v2
     appVersion: 2.4566.3
-    created: "2025-10-13T15:00:01.142511998Z"
+    created: "2025-10-13T15:33:06.006322705Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -1501,7 +1515,7 @@ entries:
     version: 2.4566.3
   - apiVersion: v2
     appVersion: 2.4566.2
-    created: "2025-10-13T15:00:01.13456066Z"
+    created: "2025-10-13T15:33:05.99682833Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -1515,7 +1529,7 @@ entries:
     version: 2.4566.2
   - apiVersion: v2
     appVersion: 2.4566.1
-    created: "2025-10-13T15:00:01.125432462Z"
+    created: "2025-10-13T15:33:05.989946843Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -1529,7 +1543,7 @@ entries:
     version: 2.4566.1
   - apiVersion: v2
     appVersion: 2.4566.0
-    created: "2025-10-13T15:00:01.116560439Z"
+    created: "2025-10-13T15:33:05.982040247Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -1543,7 +1557,7 @@ entries:
     version: 2.4566.0
   - apiVersion: v2
     appVersion: 2.4565.2
-    created: "2025-10-13T15:00:01.108153885Z"
+    created: "2025-10-13T15:33:05.974150988Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -1557,7 +1571,7 @@ entries:
     version: 2.4565.2
   - apiVersion: v2
     appVersion: 2.4565.1
-    created: "2025-10-13T15:00:01.098687687Z"
+    created: "2025-10-13T15:33:05.966437836Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -1571,7 +1585,7 @@ entries:
     version: 2.4565.1
   - apiVersion: v2
     appVersion: 2.4565.0
-    created: "2025-10-13T15:00:01.091301102Z"
+    created: "2025-10-13T15:33:05.958308076Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -1585,7 +1599,7 @@ entries:
     version: 2.4565.0
   - apiVersion: v2
     appVersion: 2.4563.1
-    created: "2025-10-13T15:00:01.082782801Z"
+    created: "2025-10-13T15:33:05.947639221Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -1599,7 +1613,7 @@ entries:
     version: 2.4563.1
   - apiVersion: v2
     appVersion: 2.4563.0
-    created: "2025-10-13T15:00:01.074566193Z"
+    created: "2025-10-13T15:33:05.939839139Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -1613,7 +1627,7 @@ entries:
     version: 2.4563.0
   - apiVersion: v2
     appVersion: 2.4257.1
-    created: "2025-10-13T15:00:01.042131003Z"
+    created: "2025-10-13T15:33:05.905846049Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -1627,7 +1641,7 @@ entries:
     version: 2.4257.1
   - apiVersion: v2
     appVersion: 2.4257.0
-    created: "2025-10-13T15:00:01.034203046Z"
+    created: "2025-10-13T15:33:05.898838697Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -1641,7 +1655,7 @@ entries:
     version: 2.4257.0
   - apiVersion: v2
     appVersion: 2.3952.0
-    created: "2025-10-13T15:00:00.952605158Z"
+    created: "2025-10-13T15:33:05.818056313Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -1655,7 +1669,7 @@ entries:
     version: 2.3952.0
   - apiVersion: v2
     appVersion: 2.3648.0
-    created: "2025-10-13T15:00:00.829864881Z"
+    created: "2025-10-13T15:33:05.699708425Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -1669,7 +1683,7 @@ entries:
     version: 2.3648.0
   - apiVersion: v2
     appVersion: 2.3345.0
-    created: "2025-10-13T15:00:00.731583946Z"
+    created: "2025-10-13T15:33:05.602479787Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -1683,7 +1697,7 @@ entries:
     version: 2.3345.0
   - apiVersion: v2
     appVersion: 2.3043.0
-    created: "2025-10-13T15:00:00.679594517Z"
+    created: "2025-10-13T15:33:05.551234447Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -1697,7 +1711,7 @@ entries:
     version: 2.3043.0
   - apiVersion: v2
     appVersion: 2.2741.1
-    created: "2025-10-13T15:00:00.637410329Z"
+    created: "2025-10-13T15:33:05.508526826Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -1711,7 +1725,7 @@ entries:
     version: 2.2741.1
   - apiVersion: v2
     appVersion: 2.2741.0
-    created: "2025-10-13T15:00:00.629107171Z"
+    created: "2025-10-13T15:33:05.495907859Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -1725,7 +1739,7 @@ entries:
     version: 2.2741.0
   - apiVersion: v2
     appVersion: 2.2440.0
-    created: "2025-10-13T15:00:00.59628427Z"
+    created: "2025-10-13T15:33:05.452610172Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -1739,7 +1753,7 @@ entries:
     version: 2.2440.0
   - apiVersion: v2
     appVersion: 2.2140.0
-    created: "2025-10-13T15:00:00.588094805Z"
+    created: "2025-10-13T15:33:05.441433538Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -1753,7 +1767,7 @@ entries:
     version: 2.2140.0
   - apiVersion: v2
     appVersion: 2.1840.0
-    created: "2025-10-13T15:00:00.371605543Z"
+    created: "2025-10-13T15:33:05.251296064Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -1767,7 +1781,7 @@ entries:
     version: 2.1840.0
   - apiVersion: v2
     appVersion: 2.1541.0
-    created: "2025-10-13T15:00:00.361155641Z"
+    created: "2025-10-13T15:33:05.24303241Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -1781,7 +1795,7 @@ entries:
     version: 2.1541.0
   - apiVersion: v2
     appVersion: 2.1243.0
-    created: "2025-10-13T15:00:00.32268688Z"
+    created: "2025-10-13T15:33:05.211116854Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -1795,7 +1809,7 @@ entries:
     version: 2.1243.0
   - apiVersion: v2
     appVersion: 2.945.0
-    created: "2025-10-13T15:00:01.742716738Z"
+    created: "2025-10-13T15:33:06.587165865Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -1809,7 +1823,7 @@ entries:
     version: 2.945.0
   - apiVersion: v2
     appVersion: 2.648.0
-    created: "2025-10-13T15:00:01.502390804Z"
+    created: "2025-10-13T15:33:06.355873702Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -1823,7 +1837,7 @@ entries:
     version: 2.648.0
   - apiVersion: v2
     appVersion: 2.351.0
-    created: "2025-10-13T15:00:00.8140347Z"
+    created: "2025-10-13T15:33:05.682535532Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -1837,7 +1851,7 @@ entries:
     version: 2.351.0
   - apiVersion: v2
     appVersion: 2.55.19
-    created: "2025-10-13T15:00:01.397805159Z"
+    created: "2025-10-13T15:33:06.253991257Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -1851,7 +1865,7 @@ entries:
     version: 2.55.19
   - apiVersion: v2
     appVersion: 2.55.18
-    created: "2025-10-13T15:00:01.389950896Z"
+    created: "2025-10-13T15:33:06.24608431Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -1865,7 +1879,7 @@ entries:
     version: 2.55.18
   - apiVersion: v2
     appVersion: 2.55.17
-    created: "2025-10-13T15:00:01.382057862Z"
+    created: "2025-10-13T15:33:06.23811164Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -1879,7 +1893,7 @@ entries:
     version: 2.55.17
   - apiVersion: v2
     appVersion: 2.55.15
-    created: "2025-10-13T15:00:01.374267079Z"
+    created: "2025-10-13T15:33:06.230025963Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -1893,7 +1907,7 @@ entries:
     version: 2.55.15
   - apiVersion: v2
     appVersion: 2.55.14
-    created: "2025-10-13T15:00:01.366204673Z"
+    created: "2025-10-13T15:33:06.222163344Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -1907,7 +1921,7 @@ entries:
     version: 2.55.14
   - apiVersion: v2
     appVersion: 2.55.11
-    created: "2025-10-13T15:00:01.358375771Z"
+    created: "2025-10-13T15:33:06.213498328Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -1921,7 +1935,7 @@ entries:
     version: 2.55.11
   - apiVersion: v2
     appVersion: 2.55.10
-    created: "2025-10-13T15:00:01.350430058Z"
+    created: "2025-10-13T15:33:06.204887922Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -1935,7 +1949,7 @@ entries:
     version: 2.55.10
   - apiVersion: v2
     appVersion: 2.55.8
-    created: "2025-10-13T15:00:01.439301738Z"
+    created: "2025-10-13T15:33:06.293397054Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -1949,7 +1963,7 @@ entries:
     version: 2.55.8
   - apiVersion: v2
     appVersion: 2.55.7
-    created: "2025-10-13T15:00:01.431238081Z"
+    created: "2025-10-13T15:33:06.28558678Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -1963,7 +1977,7 @@ entries:
     version: 2.55.7
   - apiVersion: v2
     appVersion: 2.55.6
-    created: "2025-10-13T15:00:01.423198042Z"
+    created: "2025-10-13T15:33:06.277366566Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -1977,7 +1991,7 @@ entries:
     version: 2.55.6
   - apiVersion: v2
     appVersion: 2.55.5
-    created: "2025-10-13T15:00:01.415398142Z"
+    created: "2025-10-13T15:33:06.268519146Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -1991,7 +2005,7 @@ entries:
     version: 2.55.5
   - apiVersion: v2
     appVersion: 2.55.4
-    created: "2025-10-13T15:00:01.406502269Z"
+    created: "2025-10-13T15:33:06.261303307Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -2005,7 +2019,7 @@ entries:
     version: 2.55.4
   - apiVersion: v2
     appVersion: 2.55.1
-    created: "2025-10-13T15:00:01.341270983Z"
+    created: "2025-10-13T15:33:06.197374706Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -2019,7 +2033,7 @@ entries:
     version: 2.55.1
   - apiVersion: v2
     appVersion: 2.55.0
-    created: "2025-10-13T15:00:01.331671342Z"
+    created: "2025-10-13T15:33:06.188054566Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -2033,7 +2047,7 @@ entries:
     version: 2.55.0
   - apiVersion: v2
     appVersion: 2.53.1
-    created: "2025-10-13T15:00:01.315543063Z"
+    created: "2025-10-13T15:33:06.173512725Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -2047,7 +2061,7 @@ entries:
     version: 2.53.1
   - apiVersion: v2
     appVersion: 2.53.0
-    created: "2025-10-13T15:00:01.306198069Z"
+    created: "2025-10-13T15:33:06.165638814Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -2061,7 +2075,7 @@ entries:
     version: 2.53.0
   - apiVersion: v2
     appVersion: 2.52.5
-    created: "2025-10-13T15:00:01.298647043Z"
+    created: "2025-10-13T15:33:06.157861838Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -2075,7 +2089,7 @@ entries:
     version: 2.52.5
   - apiVersion: v2
     appVersion: 2.52.4
-    created: "2025-10-13T15:00:01.291180688Z"
+    created: "2025-10-13T15:33:06.149894895Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -2089,7 +2103,7 @@ entries:
     version: 2.52.4
   - apiVersion: v2
     appVersion: 2.52.3
-    created: "2025-10-13T15:00:01.283013862Z"
+    created: "2025-10-13T15:33:06.14168222Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -2103,7 +2117,7 @@ entries:
     version: 2.52.3
   - apiVersion: v2
     appVersion: 2.52.2
-    created: "2025-10-13T15:00:01.274591007Z"
+    created: "2025-10-13T15:33:06.133352809Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -2117,7 +2131,7 @@ entries:
     version: 2.52.2
   - apiVersion: v2
     appVersion: 2.52.1
-    created: "2025-10-13T15:00:01.266148304Z"
+    created: "2025-10-13T15:33:06.125355509Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -2131,7 +2145,7 @@ entries:
     version: 2.52.1
   - apiVersion: v2
     appVersion: 2.52.0
-    created: "2025-10-13T15:00:01.257850985Z"
+    created: "2025-10-13T15:33:06.11760316Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -2145,7 +2159,7 @@ entries:
     version: 2.52.0
   - apiVersion: v2
     appVersion: 2.51.1
-    created: "2025-10-13T15:00:01.241793002Z"
+    created: "2025-10-13T15:33:06.101864076Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -2159,7 +2173,7 @@ entries:
     version: 2.51.1
   - apiVersion: v2
     appVersion: 2.51.0
-    created: "2025-10-13T15:00:01.232574488Z"
+    created: "2025-10-13T15:33:06.093847168Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -2173,7 +2187,7 @@ entries:
     version: 2.51.0
   - apiVersion: v2
     appVersion: 2.50.0
-    created: "2025-10-13T15:00:01.222450158Z"
+    created: "2025-10-13T15:33:06.08580293Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -2187,7 +2201,7 @@ entries:
     version: 2.50.0
   - apiVersion: v2
     appVersion: 2.49.0
-    created: "2025-10-13T15:00:01.207296804Z"
+    created: "2025-10-13T15:33:06.069868379Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -2201,7 +2215,7 @@ entries:
     version: 2.49.0
   - apiVersion: v2
     appVersion: 2.48.1
-    created: "2025-10-13T15:00:01.19077001Z"
+    created: "2025-10-13T15:33:06.054342707Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -2215,7 +2229,7 @@ entries:
     version: 2.48.1
   - apiVersion: v2
     appVersion: 2.48.0
-    created: "2025-10-13T15:00:01.182594941Z"
+    created: "2025-10-13T15:33:06.046530459Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -2229,7 +2243,7 @@ entries:
     version: 2.48.0
   - apiVersion: v2
     appVersion: 2.47.0
-    created: "2025-10-13T15:00:01.174332737Z"
+    created: "2025-10-13T15:33:06.038679335Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -2243,7 +2257,7 @@ entries:
     version: 2.47.0
   - apiVersion: v2
     appVersion: 2.45.0
-    created: "2025-10-13T15:00:01.066022719Z"
+    created: "2025-10-13T15:33:05.931954129Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -2257,7 +2271,7 @@ entries:
     version: 2.45.0
   - apiVersion: v2
     appVersion: 2.44.0
-    created: "2025-10-13T15:00:01.05728258Z"
+    created: "2025-10-13T15:33:05.923913948Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -2271,7 +2285,7 @@ entries:
     version: 2.44.0
   - apiVersion: v2
     appVersion: 2.43.0
-    created: "2025-10-13T15:00:01.050248705Z"
+    created: "2025-10-13T15:33:05.915565932Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -2285,7 +2299,7 @@ entries:
     version: 2.43.0
   - apiVersion: v2
     appVersion: 2.42.0
-    created: "2025-10-13T15:00:01.02601674Z"
+    created: "2025-10-13T15:33:05.884740481Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -2299,7 +2313,7 @@ entries:
     version: 2.42.0
   - apiVersion: v2
     appVersion: 2.40.0
-    created: "2025-10-13T15:00:01.017885645Z"
+    created: "2025-10-13T15:33:05.873238183Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -2313,7 +2327,7 @@ entries:
     version: 2.40.0
   - apiVersion: v2
     appVersion: 2.39.0
-    created: "2025-10-13T15:00:00.94381712Z"
+    created: "2025-10-13T15:33:05.811150079Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -2327,7 +2341,7 @@ entries:
     version: 2.39.0
   - apiVersion: v2
     appVersion: 2.38.3
-    created: "2025-10-13T15:00:00.935259498Z"
+    created: "2025-10-13T15:33:05.803240347Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -2341,7 +2355,7 @@ entries:
     version: 2.38.3
   - apiVersion: v2
     appVersion: 2.38.2
-    created: "2025-10-13T15:00:00.926731335Z"
+    created: "2025-10-13T15:33:05.795495903Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -2355,7 +2369,7 @@ entries:
     version: 2.38.2
   - apiVersion: v2
     appVersion: 2.38.1
-    created: "2025-10-13T15:00:00.918322988Z"
+    created: "2025-10-13T15:33:05.787757482Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -2369,7 +2383,7 @@ entries:
     version: 2.38.1
   - apiVersion: v2
     appVersion: 2.38.0
-    created: "2025-10-13T15:00:00.91002385Z"
+    created: "2025-10-13T15:33:05.779994122Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -2383,7 +2397,7 @@ entries:
     version: 2.38.0
   - apiVersion: v2
     appVersion: 2.37.15
-    created: "2025-10-13T15:00:00.869644742Z"
+    created: "2025-10-13T15:33:05.740266965Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -2397,7 +2411,7 @@ entries:
     version: 2.37.15
   - apiVersion: v2
     appVersion: 2.37.12
-    created: "2025-10-13T15:00:00.861644232Z"
+    created: "2025-10-13T15:33:05.732105948Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -2411,7 +2425,7 @@ entries:
     version: 2.37.12
   - apiVersion: v2
     appVersion: 2.37.11
-    created: "2025-10-13T15:00:00.85389439Z"
+    created: "2025-10-13T15:33:05.724053683Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -2425,7 +2439,7 @@ entries:
     version: 2.37.11
   - apiVersion: v2
     appVersion: 2.37.10
-    created: "2025-10-13T15:00:00.845825196Z"
+    created: "2025-10-13T15:33:05.715443581Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -2439,7 +2453,7 @@ entries:
     version: 2.37.10
   - apiVersion: v2
     appVersion: 2.37.5
-    created: "2025-10-13T15:00:00.901921985Z"
+    created: "2025-10-13T15:33:05.772130461Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -2453,7 +2467,7 @@ entries:
     version: 2.37.5
   - apiVersion: v2
     appVersion: 2.37.4
-    created: "2025-10-13T15:00:00.893679895Z"
+    created: "2025-10-13T15:33:05.764239201Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -2467,7 +2481,7 @@ entries:
     version: 2.37.4
   - apiVersion: v2
     appVersion: 2.37.3
-    created: "2025-10-13T15:00:00.885527956Z"
+    created: "2025-10-13T15:33:05.756185733Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -2481,7 +2495,7 @@ entries:
     version: 2.37.3
   - apiVersion: v2
     appVersion: 2.37.2
-    created: "2025-10-13T15:00:00.877501645Z"
+    created: "2025-10-13T15:33:05.748366405Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -2495,7 +2509,7 @@ entries:
     version: 2.37.2
   - apiVersion: v2
     appVersion: 2.37.0
-    created: "2025-10-13T15:00:00.838014607Z"
+    created: "2025-10-13T15:33:05.707715254Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -2509,7 +2523,7 @@ entries:
     version: 2.37.0
   - apiVersion: v2
     appVersion: 2.36.0
-    created: "2025-10-13T15:00:00.821945078Z"
+    created: "2025-10-13T15:33:05.691497609Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -2523,7 +2537,7 @@ entries:
     version: 2.36.0
   - apiVersion: v2
     appVersion: 2.35.6
-    created: "2025-10-13T15:00:00.80570514Z"
+    created: "2025-10-13T15:33:05.675058147Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -2537,7 +2551,7 @@ entries:
     version: 2.35.6
   - apiVersion: v2
     appVersion: 2.35.5
-    created: "2025-10-13T15:00:00.797305653Z"
+    created: "2025-10-13T15:33:05.66794177Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -2551,7 +2565,7 @@ entries:
     version: 2.35.5
   - apiVersion: v2
     appVersion: 2.35.3
-    created: "2025-10-13T15:00:00.789342657Z"
+    created: "2025-10-13T15:33:05.65939996Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -2565,7 +2579,7 @@ entries:
     version: 2.35.3
   - apiVersion: v2
     appVersion: 2.35.2
-    created: "2025-10-13T15:00:00.780870661Z"
+    created: "2025-10-13T15:33:05.651444087Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -2579,7 +2593,7 @@ entries:
     version: 2.35.2
   - apiVersion: v2
     appVersion: 2.35.1
-    created: "2025-10-13T15:00:00.772187473Z"
+    created: "2025-10-13T15:33:05.643576883Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -2593,7 +2607,7 @@ entries:
     version: 2.35.1
   - apiVersion: v2
     appVersion: 2.35.0
-    created: "2025-10-13T15:00:00.764589451Z"
+    created: "2025-10-13T15:33:05.635539548Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -2607,7 +2621,7 @@ entries:
     version: 2.35.0
   - apiVersion: v2
     appVersion: 2.34.3
-    created: "2025-10-13T15:00:00.756744226Z"
+    created: "2025-10-13T15:33:05.627811627Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -2621,7 +2635,7 @@ entries:
     version: 2.34.3
   - apiVersion: v2
     appVersion: 2.34.1
-    created: "2025-10-13T15:00:00.748656918Z"
+    created: "2025-10-13T15:33:05.619647245Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -2635,7 +2649,7 @@ entries:
     version: 2.34.1
   - apiVersion: v2
     appVersion: 2.34.0
-    created: "2025-10-13T15:00:00.740358099Z"
+    created: "2025-10-13T15:33:05.611150116Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -2649,7 +2663,7 @@ entries:
     version: 2.34.0
   - apiVersion: v2
     appVersion: 2.33.0
-    created: "2025-10-13T15:00:00.723464792Z"
+    created: "2025-10-13T15:33:05.595301646Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -2663,7 +2677,7 @@ entries:
     version: 2.33.0
   - apiVersion: v2
     appVersion: 2.32.1
-    created: "2025-10-13T15:00:00.714306144Z"
+    created: "2025-10-13T15:33:05.584911339Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -2677,7 +2691,7 @@ entries:
     version: 2.32.1
   - apiVersion: v2
     appVersion: 2.32.0
-    created: "2025-10-13T15:00:00.70512916Z"
+    created: "2025-10-13T15:33:05.575460056Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -2691,7 +2705,7 @@ entries:
     version: 2.32.0
   - apiVersion: v2
     appVersion: 2.31.1
-    created: "2025-10-13T15:00:00.695386795Z"
+    created: "2025-10-13T15:33:05.567189396Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -2705,7 +2719,7 @@ entries:
     version: 2.31.1
   - apiVersion: v2
     appVersion: 2.31.0
-    created: "2025-10-13T15:00:00.688122298Z"
+    created: "2025-10-13T15:33:05.559385977Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -2719,7 +2733,7 @@ entries:
     version: 2.31.0
   - apiVersion: v2
     appVersion: 2.30.0
-    created: "2025-10-13T15:00:00.670833105Z"
+    created: "2025-10-13T15:33:05.543030483Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -2733,7 +2747,7 @@ entries:
     version: 2.30.0
   - apiVersion: v2
     appVersion: 2.29.0
-    created: "2025-10-13T15:00:00.65416534Z"
+    created: "2025-10-13T15:33:05.525955576Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -2747,7 +2761,7 @@ entries:
     version: 2.29.0
   - apiVersion: v2
     appVersion: 2.28.0
-    created: "2025-10-13T15:00:00.644619632Z"
+    created: "2025-10-13T15:33:05.516797879Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -2761,7 +2775,7 @@ entries:
     version: 2.28.0
   - apiVersion: v2
     appVersion: 2.27.0
-    created: "2025-10-13T15:00:00.620977534Z"
+    created: "2025-10-13T15:33:05.486434337Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -2775,7 +2789,7 @@ entries:
     version: 2.27.0
   - apiVersion: v2
     appVersion: 2.26.0
-    created: "2025-10-13T15:00:00.612823399Z"
+    created: "2025-10-13T15:33:05.478514412Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -2789,7 +2803,7 @@ entries:
     version: 2.26.0
   - apiVersion: v2
     appVersion: 2.25.0
-    created: "2025-10-13T15:00:00.604774474Z"
+    created: "2025-10-13T15:33:05.466069974Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -2803,7 +2817,7 @@ entries:
     version: 2.25.0
   - apiVersion: v2
     appVersion: 2.21.2
-    created: "2025-10-13T15:00:00.579971761Z"
+    created: "2025-10-13T15:33:05.431401023Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -2817,7 +2831,7 @@ entries:
     version: 2.21.2
   - apiVersion: v2
     appVersion: 2.21.1
-    created: "2025-10-13T15:00:00.571976477Z"
+    created: "2025-10-13T15:33:05.424446806Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -2831,7 +2845,7 @@ entries:
     version: 2.21.1
   - apiVersion: v2
     appVersion: 2.21.0
-    created: "2025-10-13T15:00:00.563815003Z"
+    created: "2025-10-13T15:33:05.416484363Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -2845,7 +2859,7 @@ entries:
     version: 2.21.0
   - apiVersion: v2
     appVersion: 2.20.0
-    created: "2025-10-13T15:00:00.555459257Z"
+    created: "2025-10-13T15:33:05.408767231Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -2859,7 +2873,7 @@ entries:
     version: 2.20.0
   - apiVersion: v2
     appVersion: 2.19.23
-    created: "2025-10-13T15:00:00.490445288Z"
+    created: "2025-10-13T15:33:05.345238678Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -2873,7 +2887,7 @@ entries:
     version: 2.19.23
   - apiVersion: v2
     appVersion: 2.19.22
-    created: "2025-10-13T15:00:00.48226206Z"
+    created: "2025-10-13T15:33:05.337241318Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -2887,7 +2901,7 @@ entries:
     version: 2.19.22
   - apiVersion: v2
     appVersion: 2.19.21
-    created: "2025-10-13T15:00:00.473541938Z"
+    created: "2025-10-13T15:33:05.329777117Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -2901,7 +2915,7 @@ entries:
     version: 2.19.21
   - apiVersion: v2
     appVersion: 2.19.20
-    created: "2025-10-13T15:00:00.464280834Z"
+    created: "2025-10-13T15:33:05.322128089Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -2915,7 +2929,7 @@ entries:
     version: 2.19.20
   - apiVersion: v2
     appVersion: 2.19.18
-    created: "2025-10-13T15:00:00.441443044Z"
+    created: "2025-10-13T15:33:05.306351853Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -2929,7 +2943,7 @@ entries:
     version: 2.19.18
   - apiVersion: v2
     appVersion: 2.19.17
-    created: "2025-10-13T15:00:00.43071318Z"
+    created: "2025-10-13T15:33:05.29863122Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -2943,7 +2957,7 @@ entries:
     version: 2.19.17
   - apiVersion: v2
     appVersion: 2.19.16
-    created: "2025-10-13T15:00:00.42285598Z"
+    created: "2025-10-13T15:33:05.291034574Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -2957,7 +2971,7 @@ entries:
     version: 2.19.16
   - apiVersion: v2
     appVersion: 2.19.15
-    created: "2025-10-13T15:00:00.41516797Z"
+    created: "2025-10-13T15:33:05.282726163Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -2971,7 +2985,7 @@ entries:
     version: 2.19.15
   - apiVersion: v2
     appVersion: 2.19.14
-    created: "2025-10-13T15:00:00.407002154Z"
+    created: "2025-10-13T15:33:05.274147996Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -2985,7 +2999,7 @@ entries:
     version: 2.19.14
   - apiVersion: v2
     appVersion: 2.19.13
-    created: "2025-10-13T15:00:00.395513053Z"
+    created: "2025-10-13T15:33:05.267275335Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -2999,7 +3013,7 @@ entries:
     version: 2.19.13
   - apiVersion: v2
     appVersion: 2.19.12
-    created: "2025-10-13T15:00:00.3842919Z"
+    created: "2025-10-13T15:33:05.259208211Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -3013,7 +3027,7 @@ entries:
     version: 2.19.12
   - apiVersion: v2
     appVersion: 2.19.7
-    created: "2025-10-13T15:00:00.523087253Z"
+    created: "2025-10-13T15:33:05.376644724Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -3027,7 +3041,7 @@ entries:
     version: 2.19.7
   - apiVersion: v2
     appVersion: 2.19.6
-    created: "2025-10-13T15:00:00.515087859Z"
+    created: "2025-10-13T15:33:05.369021384Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -3041,7 +3055,7 @@ entries:
     version: 2.19.6
   - apiVersion: v2
     appVersion: 2.19.5
-    created: "2025-10-13T15:00:00.506758383Z"
+    created: "2025-10-13T15:33:05.361163913Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -3055,7 +3069,7 @@ entries:
     version: 2.19.5
   - apiVersion: v2
     appVersion: 2.19.3
-    created: "2025-10-13T15:00:00.498607753Z"
+    created: "2025-10-13T15:33:05.353463748Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -3069,7 +3083,7 @@ entries:
     version: 2.19.3
   - apiVersion: v2
     appVersion: 2.19.2
-    created: "2025-10-13T15:00:00.450697579Z"
+    created: "2025-10-13T15:33:05.314096034Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -3083,7 +3097,7 @@ entries:
     version: 2.19.2
   - apiVersion: v2
     appVersion: 2.13.2
-    created: "2025-10-13T15:00:00.352792557Z"
+    created: "2025-10-13T15:33:05.234850036Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -3097,7 +3111,7 @@ entries:
     version: 2.13.2
   - apiVersion: v2
     appVersion: 2.13.1
-    created: "2025-10-13T15:00:00.34072941Z"
+    created: "2025-10-13T15:33:05.227106592Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -3111,7 +3125,7 @@ entries:
     version: 2.13.1
   - apiVersion: v2
     appVersion: 2.13.0
-    created: "2025-10-13T15:00:00.331205583Z"
+    created: "2025-10-13T15:33:05.218907122Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -3125,7 +3139,7 @@ entries:
     version: 2.13.0
   - apiVersion: v2
     appVersion: 2.11.4
-    created: "2025-10-13T15:00:00.133065989Z"
+    created: "2025-10-13T15:33:05.013251228Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -3139,7 +3153,7 @@ entries:
     version: 2.11.4
   - apiVersion: v2
     appVersion: 2.11.3
-    created: "2025-10-13T15:00:00.124763974Z"
+    created: "2025-10-13T15:33:05.005381897Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -3153,7 +3167,7 @@ entries:
     version: 2.11.3
   - apiVersion: v2
     appVersion: 2.11.2
-    created: "2025-10-13T15:00:00.116233698Z"
+    created: "2025-10-13T15:33:04.997608057Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -3167,7 +3181,7 @@ entries:
     version: 2.11.2
   - apiVersion: v2
     appVersion: 2.11.1
-    created: "2025-10-13T15:00:00.107103635Z"
+    created: "2025-10-13T15:33:04.989309986Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -3181,7 +3195,7 @@ entries:
     version: 2.11.1
   - apiVersion: v2
     appVersion: 2.11.0
-    created: "2025-10-13T15:00:00.098516612Z"
+    created: "2025-10-13T15:33:04.981415646Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -3195,7 +3209,7 @@ entries:
     version: 2.11.0
   - apiVersion: v2
     appVersion: 2.10.1
-    created: "2025-10-13T14:59:59.997465421Z"
+    created: "2025-10-13T15:33:04.901009764Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -3209,7 +3223,7 @@ entries:
     version: 2.10.1
   - apiVersion: v2
     appVersion: 2.10.0
-    created: "2025-10-13T14:59:59.98558893Z"
+    created: "2025-10-13T15:33:04.892300111Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -3223,7 +3237,7 @@ entries:
     version: 2.10.0
   - apiVersion: v2
     appVersion: 2.9.0
-    created: "2025-10-13T15:00:01.709783864Z"
+    created: "2025-10-13T15:33:06.553788978Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -3237,7 +3251,7 @@ entries:
     version: 2.9.0
   - apiVersion: v2
     appVersion: 2.8.0
-    created: "2025-10-13T15:00:01.669051375Z"
+    created: "2025-10-13T15:33:06.513976174Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -3251,7 +3265,7 @@ entries:
     version: 2.8.0
   - apiVersion: v2
     appVersion: 2.7.18
-    created: "2025-10-13T15:00:01.584628661Z"
+    created: "2025-10-13T15:33:06.43458252Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -3265,7 +3279,7 @@ entries:
     version: 2.7.18
   - apiVersion: v2
     appVersion: 2.7.17
-    created: "2025-10-13T15:00:01.576548697Z"
+    created: "2025-10-13T15:33:06.426356926Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -3279,7 +3293,7 @@ entries:
     version: 2.7.17
   - apiVersion: v2
     appVersion: 2.7.15
-    created: "2025-10-13T15:00:01.56857518Z"
+    created: "2025-10-13T15:33:06.418636359Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -3293,7 +3307,7 @@ entries:
     version: 2.7.15
   - apiVersion: v2
     appVersion: 2.7.14
-    created: "2025-10-13T15:00:01.560292196Z"
+    created: "2025-10-13T15:33:06.410875706Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -3307,7 +3321,7 @@ entries:
     version: 2.7.14
   - apiVersion: v2
     appVersion: 2.7.13
-    created: "2025-10-13T15:00:01.552152194Z"
+    created: "2025-10-13T15:33:06.403261479Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -3321,7 +3335,7 @@ entries:
     version: 2.7.13
   - apiVersion: v2
     appVersion: 2.7.11
-    created: "2025-10-13T15:00:01.543958549Z"
+    created: "2025-10-13T15:33:06.395621095Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -3335,7 +3349,7 @@ entries:
     version: 2.7.11
   - apiVersion: v2
     appVersion: 2.7.10
-    created: "2025-10-13T15:00:01.535853302Z"
+    created: "2025-10-13T15:33:06.387942009Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -3349,7 +3363,7 @@ entries:
     version: 2.7.10
   - apiVersion: v2
     appVersion: 2.7.8
-    created: "2025-10-13T15:00:01.634881892Z"
+    created: "2025-10-13T15:33:06.480632066Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -3363,7 +3377,7 @@ entries:
     version: 2.7.8
   - apiVersion: v2
     appVersion: 2.7.6
-    created: "2025-10-13T15:00:01.626649705Z"
+    created: "2025-10-13T15:33:06.47322933Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -3377,7 +3391,7 @@ entries:
     version: 2.7.6
   - apiVersion: v2
     appVersion: 2.7.5
-    created: "2025-10-13T15:00:01.617653123Z"
+    created: "2025-10-13T15:33:06.466303684Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -3391,7 +3405,7 @@ entries:
     version: 2.7.5
   - apiVersion: v2
     appVersion: 2.7.4
-    created: "2025-10-13T15:00:01.609171938Z"
+    created: "2025-10-13T15:33:06.45826608Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -3405,7 +3419,7 @@ entries:
     version: 2.7.4
   - apiVersion: v2
     appVersion: 2.7.3
-    created: "2025-10-13T15:00:01.600718787Z"
+    created: "2025-10-13T15:33:06.450402249Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -3419,7 +3433,7 @@ entries:
     version: 2.7.3
   - apiVersion: v2
     appVersion: 2.7.2
-    created: "2025-10-13T15:00:01.592498074Z"
+    created: "2025-10-13T15:33:06.442376235Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -3433,7 +3447,7 @@ entries:
     version: 2.7.2
   - apiVersion: v2
     appVersion: 2.7.1
-    created: "2025-10-13T15:00:01.527775612Z"
+    created: "2025-10-13T15:33:06.379877614Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -3447,7 +3461,7 @@ entries:
     version: 2.7.1
   - apiVersion: v2
     appVersion: 2.7.0
-    created: "2025-10-13T15:00:01.519820049Z"
+    created: "2025-10-13T15:33:06.370501852Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -3461,7 +3475,7 @@ entries:
     version: 2.7.0
   - apiVersion: v2
     appVersion: 2.6.3
-    created: "2025-10-13T15:00:01.479668254Z"
+    created: "2025-10-13T15:33:06.332568742Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -3475,7 +3489,7 @@ entries:
     version: 2.6.3
   - apiVersion: v2
     appVersion: 2.6.2
-    created: "2025-10-13T15:00:01.471689569Z"
+    created: "2025-10-13T15:33:06.324762619Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -3489,7 +3503,7 @@ entries:
     version: 2.6.2
   - apiVersion: v2
     appVersion: 2.6.1
-    created: "2025-10-13T15:00:01.463125303Z"
+    created: "2025-10-13T15:33:06.316785395Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -3503,7 +3517,7 @@ entries:
     version: 2.6.1
   - apiVersion: v2
     appVersion: 2.6.0
-    created: "2025-10-13T15:00:01.454138074Z"
+    created: "2025-10-13T15:33:06.30903578Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -3517,7 +3531,7 @@ entries:
     version: 2.6.0
   - apiVersion: v2
     appVersion: 2.5.0
-    created: "2025-10-13T15:00:01.215266002Z"
+    created: "2025-10-13T15:33:06.076942396Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -3531,7 +3545,7 @@ entries:
     version: 2.5.0
   - apiVersion: v2
     appVersion: 2.4.5
-    created: "2025-10-13T15:00:01.009675134Z"
+    created: "2025-10-13T15:33:05.866198851Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -3545,7 +3559,7 @@ entries:
     version: 2.4.5
   - apiVersion: v2
     appVersion: 2.4.4
-    created: "2025-10-13T15:00:01.00166349Z"
+    created: "2025-10-13T15:33:05.858392124Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -3559,7 +3573,7 @@ entries:
     version: 2.4.4
   - apiVersion: v2
     appVersion: 2.4.3
-    created: "2025-10-13T15:00:00.993789682Z"
+    created: "2025-10-13T15:33:05.850620578Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -3573,7 +3587,7 @@ entries:
     version: 2.4.3
   - apiVersion: v2
     appVersion: 2.4.2
-    created: "2025-10-13T15:00:00.984523586Z"
+    created: "2025-10-13T15:33:05.842899077Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -3587,7 +3601,7 @@ entries:
     version: 2.4.2
   - apiVersion: v2
     appVersion: 2.4.1
-    created: "2025-10-13T15:00:00.974126172Z"
+    created: "2025-10-13T15:33:05.8350134Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -3601,7 +3615,7 @@ entries:
     version: 2.4.1
   - apiVersion: v2
     appVersion: 2.4.0
-    created: "2025-10-13T15:00:00.961133993Z"
+    created: "2025-10-13T15:33:05.82671069Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -3615,7 +3629,7 @@ entries:
     version: 2.4.0
   - apiVersion: v2
     appVersion: 2.3.0
-    created: "2025-10-13T15:00:00.661648997Z"
+    created: "2025-10-13T15:33:05.534271766Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -3629,7 +3643,7 @@ entries:
     version: 2.3.0
   - apiVersion: v2
     appVersion: 2.2.3
-    created: "2025-10-13T15:00:00.547230424Z"
+    created: "2025-10-13T15:33:05.400830555Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -3643,7 +3657,7 @@ entries:
     version: 2.2.3
   - apiVersion: v2
     appVersion: 2.2.2
-    created: "2025-10-13T15:00:00.53918276Z"
+    created: "2025-10-13T15:33:05.392547236Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -3657,7 +3671,7 @@ entries:
     version: 2.2.2
   - apiVersion: v2
     appVersion: 2.2.0
-    created: "2025-10-13T15:00:00.53107988Z"
+    created: "2025-10-13T15:33:05.384936922Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -3671,7 +3685,7 @@ entries:
     version: 2.2.0
   - apiVersion: v2
     appVersion: 2.1.0
-    created: "2025-10-13T14:59:59.972272017Z"
+    created: "2025-10-13T15:33:04.884417844Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -3685,7 +3699,7 @@ entries:
     version: 2.1.0
   - apiVersion: v2
     appVersion: 2.0.13
-    created: "2025-10-13T14:59:59.913438233Z"
+    created: "2025-10-13T15:33:04.837980224Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -3699,7 +3713,7 @@ entries:
     version: 2.0.13
   - apiVersion: v2
     appVersion: 2.0.12
-    created: "2025-10-13T14:59:59.904609873Z"
+    created: "2025-10-13T15:33:04.830155121Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -3713,7 +3727,7 @@ entries:
     version: 2.0.12
   - apiVersion: v2
     appVersion: 2.0.11
-    created: "2025-10-13T14:59:59.892743115Z"
+    created: "2025-10-13T15:33:04.822410935Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -3727,7 +3741,7 @@ entries:
     version: 2.0.11
   - apiVersion: v2
     appVersion: 2.0.10
-    created: "2025-10-13T14:59:59.882366219Z"
+    created: "2025-10-13T15:33:04.814539036Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -3741,7 +3755,7 @@ entries:
     version: 2.0.10
   - apiVersion: v2
     appVersion: 2.0.9
-    created: "2025-10-13T14:59:59.962256011Z"
+    created: "2025-10-13T15:33:04.876947948Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -3755,7 +3769,7 @@ entries:
     version: 2.0.9
   - apiVersion: v2
     appVersion: 2.0.8
-    created: "2025-10-13T14:59:59.953674254Z"
+    created: "2025-10-13T15:33:04.869299908Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -3769,7 +3783,7 @@ entries:
     version: 2.0.8
   - apiVersion: v2
     appVersion: 2.0.7
-    created: "2025-10-13T14:59:59.944731934Z"
+    created: "2025-10-13T15:33:04.861449344Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -3783,7 +3797,7 @@ entries:
     version: 2.0.7
   - apiVersion: v2
     appVersion: 2.0.6
-    created: "2025-10-13T14:59:59.936213342Z"
+    created: "2025-10-13T15:33:04.853472281Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -3797,7 +3811,7 @@ entries:
     version: 2.0.6
   - apiVersion: v2
     appVersion: 2.0.2
-    created: "2025-10-13T14:59:59.92388217Z"
+    created: "2025-10-13T15:33:04.845716886Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -3811,7 +3825,7 @@ entries:
     version: 2.0.2
   - apiVersion: v2
     appVersion: 2.0.1
-    created: "2025-10-13T14:59:59.870996562Z"
+    created: "2025-10-13T15:33:04.806724037Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -3825,7 +3839,7 @@ entries:
     version: 2.0.1
   - apiVersion: v2
     appVersion: 1.2.3
-    created: "2025-10-13T14:59:59.860324253Z"
+    created: "2025-10-13T15:33:04.79911221Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -3839,7 +3853,7 @@ entries:
     version: 1.2.3
   - apiVersion: v2
     appVersion: 1.1.2
-    created: "2025-10-13T14:59:59.851560889Z"
+    created: "2025-10-13T15:33:04.79134279Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -3853,7 +3867,7 @@ entries:
     version: 1.1.2
   - apiVersion: v2
     appVersion: 1.1.1
-    created: "2025-10-13T14:59:59.84380613Z"
+    created: "2025-10-13T15:33:04.783421735Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -3867,7 +3881,7 @@ entries:
     version: 1.1.1
   - apiVersion: v2
     appVersion: 0.0.1
-    created: "2025-10-13T14:59:59.835709662Z"
+    created: "2025-10-13T15:33:04.774429317Z"
     dependencies:
     - name: traefik
       repository: https://traefik.github.io/charts
@@ -3879,4 +3893,4 @@ entries:
     urls:
     - charts/netsocs-helm-chart-0.0.1.tgz
     version: 0.0.1
-generated: "2025-10-13T14:59:59.827441781Z"
+generated: "2025-10-13T15:33:04.766171508Z"
