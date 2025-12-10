@@ -16,7 +16,7 @@ spec:
         spec:
             containers:
                 - name: automation-backend
-                  image: {{ .Values.registry }}/module.automation/backend:b4a4ffd094d39e9b48b5527fdcb7301ef1d87c4f
+                  image: {{ .Values.registry }}/module.automation/backend:f43aa0936fe05c7f798778c6a8339b461352b795
                   imagePullPolicy: {{ .Values.imagePullPolicy }}                  
                   ports:
                     - containerPort: 8080
