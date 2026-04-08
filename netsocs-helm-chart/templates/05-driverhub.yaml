@@ -18,7 +18,7 @@ spec:
                 - name: docker-cred
             containers:
                 - name: netsocs-driverhub
-                  image: {{ .Values.registry }}/service.driver_hub/backend:bdf3e4d200a5f4589d34240765b55a1b341a08cc
+                  image: {{ .Values.registry }}/service.driver_hub/backend:c5bb476c640fdacba168f561b07b6faeb809a46c
                   imagePullPolicy: {{ .Values.imagePullPolicy }}
                   ports:
                       - containerPort: 3196
